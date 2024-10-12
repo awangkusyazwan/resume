@@ -1,10 +1,10 @@
 import 'braid-design-system/reset';
 
 import { BraidProvider } from 'braid-design-system';
-import apac from 'braid-design-system/themes/apac';
 import { StrictMode } from 'react';
 
-import { NextSteps } from './NextSteps';
+import seekJobs from 'braid-design-system/themes/seekJobs';
+import Resume from './Resume';
 
 interface AppProps {
   environment: 'development' | 'production';
@@ -12,8 +12,8 @@ interface AppProps {
 
 export default ({ environment }: AppProps) => (
   <StrictMode>
-    <BraidProvider theme={apac}>
-      <NextSteps environment={environment} />
+    <BraidProvider theme={seekJobs}>
+      <Resume>
     </BraidProvider>
   </StrictMode>
 );
