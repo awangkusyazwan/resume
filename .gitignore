@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+
+# managed by sku
+.eslintcache
+.eslintrc
+.prettierrc
+coverage/
+dist/
+report/
+tsconfig.json
+# end managed by sku
