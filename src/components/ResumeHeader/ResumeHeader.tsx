@@ -1,11 +1,11 @@
-import { Card, Column, Columns, Hidden, Stack } from 'braid-design-system';
+import { Box, Column, Columns, Hidden, Stack } from 'braid-design-system';
 
-import { NameAndCredentials } from './NameAndCredentials';
+import NameAndCredentials from './NameAndCredentials';
 import PointsOfContact from './PointsOfContact';
 import ProfessionalPortfolio from './ProfessionalPortfolio';
 
 export const ResumeHeader = () => (
-  <Card>
+  <Box background="neutralSoft" borderRadius="large" padding="large">
     <Stack space="small">
       <NameAndCredentials />
       <Hidden above="mobile">
@@ -23,5 +23,5 @@ export const ResumeHeader = () => (
         </Columns>
       </Hidden>
     </Stack>
-  </Card>
+  </Box>
 );

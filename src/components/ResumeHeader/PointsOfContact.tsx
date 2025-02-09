@@ -11,7 +11,7 @@ import {
   Text,
 } from 'braid-design-system';
 
-export const PointsOfContact = () => (
+const PointsOfContact = () => (
   <>
     <Stack space="xxsmall">
       <Inline space="xxsmall" alignY="center">

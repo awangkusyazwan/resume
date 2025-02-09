@@ -51,8 +51,6 @@ export const PageContent = () => (
       </TabsProvider>
     </Hidden>
     <Box height="touchable" />
-    <hr />
-    <Box height="touchable" />
     <Box
       style={{
         height: '36px',

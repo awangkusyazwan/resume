@@ -11,7 +11,7 @@ import { GitHubLogo } from './assets/GitHubLogo';
 import { LinkedInLogo } from './assets/LinkedInLogo';
 import { YouTubeLogo } from './assets/YouTubeLogo';
 
-export const ProfessionalPortfolio = () => (
+const ProfessionalPortfolio = () => (
   <>
     <Hidden print above="mobile">
       <Stack space="small">
@@ -28,9 +28,6 @@ export const ProfessionalPortfolio = () => (
           <Stack space="xxsmall">
             <YouTubeLogo />
             <LinkedInLogo />
-            <GitHubLogo />
-            <LinkedInLogo />
-            <YouTubeLogo />
             <GitHubLogo />
           </Stack>
         </ContentBlock>
@@ -49,9 +46,6 @@ export const ProfessionalPortfolio = () => (
             </Text>
           </Box>
           <Inline space="xxsmall">
-            <LinkedInLogo />
-            <YouTubeLogo />
-            <GitHubLogo />
             <LinkedInLogo />
             <YouTubeLogo />
             <GitHubLogo />
