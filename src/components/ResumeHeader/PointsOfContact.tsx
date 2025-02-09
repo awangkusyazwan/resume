@@ -11,50 +11,44 @@ import {
   Text,
 } from 'braid-design-system';
 
-const PointsOfContact = () => (
-  <>
-    <Stack space="xxsmall">
-      <Inline space="xxsmall" alignY="center">
-        <Box
-          style={{
-            height: '12px',
-          }}
-        >
-          <Text weight="strong" tone="promote" size="small">
-            Points-of-contact
-          </Text>
-        </Box>
-        <TooltipRenderer
-          id="point-of-contact-tooltip"
-          tooltip={<Text>This is always up-to-date!</Text>}
-        >
-          {({ triggerProps }) => (
-            <Box aria-label="Points of contact" {...triggerProps}>
-              <IconInfo size="xsmall" tone="positive" />
-            </Box>
-          )}
-        </TooltipRenderer>
-      </Inline>
-      <Text size="small" icon={<IconMail tone="positive" />}>
-        <TextLink href="mailto:me@awangkusyazwan.work">
-          me@awangkusyazwan.work
-        </TextLink>
-      </Text>
-      <Text size="small" icon={<IconPhone tone="positive" />}>
-        <TextLink href="tel:+601154104995">+601154104995</TextLink>
-      </Text>
-      <Text size="small" icon={<IconGlobe tone="positive" />}>
-        <TextLink href="https://awangkusyazwan.work">
-          awangkusyazwan.work
-        </TextLink>
-      </Text>
-    </Stack>
-    <Box
-      style={{
-        height: '18px',
-      }}
-    />
-  </>
-);
+const PointsOfContact = () => {
+  const phoneNumber = '+60168093948';
+  const email = 'me@awangkusyazwan.work';
+  const website = 'awangkusyazwan.work';
+
+  const phoneNumberHref = `tel:${phoneNumber}`;
+  const emailHref = `mailto:${email}`;
+  const websiteHref = `https://${website}`;
+
+  return (
+    <>
+      <Stack space="xxsmall">
+        <Text weight="strong" tone="promote" size="small">
+          Points-of-contact
+        </Text>
+        <Text size="small" icon={<IconMail tone="positive" />}>
+          <TextLink href={emailHref} aria-label="email">
+            {email}
+          </TextLink>
+        </Text>
+        <Text size="small" icon={<IconPhone tone="positive" />}>
+          <TextLink href={phoneNumberHref} aria-label="phone-number">
+            {phoneNumber}
+          </TextLink>
+        </Text>
+        <Text size="small" icon={<IconGlobe tone="positive" />}>
+          <TextLink href={websiteHref} aria-label="website">
+            {website}
+          </TextLink>
+        </Text>
+      </Stack>
+      <Box
+        style={{
+          height: '18px',
+        }}
+      />
+    </>
+  );
+};
 
 export default PointsOfContact;

@@ -1,10 +1,12 @@
 import { Box } from 'braid-design-system';
 
-export const AcademicBackgroundSection = () => {
+export const AcademicAndCredentialsSection = () => (
   <Box
     style={{
       height: '500px',
     }}
     boxShadow="small"
-  />;
-};
+  />
+);
+
+export default AcademicAndCredentialsSection;

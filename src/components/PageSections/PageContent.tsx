@@ -8,7 +8,13 @@ import {
   TabPanels,
   TabPanel,
   Heading,
+  Alert,
+  Text,
 } from 'braid-design-system';
+import ReferencesSection from '../ResumeSections/ReferencesSection';
+import VolunteeringInterestSection from '../ResumeSections/VolunteeringInterestsSection';
+import ProfessionalExperienceSection from '../ResumeSections/ProfessionalExperienceSection';
+import AcademicAndCredentialsSection from '../ResumeSections/AcademicAndCredentialsSection';
 
 export const PageContent = () => (
   <>
@@ -23,47 +29,18 @@ export const PageContent = () => (
           </Tabs>
           <TabPanels>
             <TabPanel>
-              <Box
-                style={{
-                  height: '500px',
-                }}
-                boxShadow="small"
-              />
+              <ProfessionalExperienceSection />
             </TabPanel>
             <TabPanel>
-              <Box
-                style={{
-                  height: '500px',
-                }}
-                boxShadow="small"
-              />
+              <AcademicAndCredentialsSection />
             </TabPanel>
             <TabPanel>
-              <Box
-                style={{
-                  height: '500px',
-                }}
-                boxShadow="small"
-              />
+              <VolunteeringInterestSection />
             </TabPanel>
           </TabPanels>
         </Stack>
       </TabsProvider>
     </Hidden>
-    <Box height="touchable" />
-    <Box
-      style={{
-        height: '36px',
-      }}
-      justifyContent="center"
-    >
-      <Heading level="4">References</Heading>
-    </Box>
-    <Box
-      style={{
-        height: '500px',
-      }}
-      boxShadow="small"
-    />
+    <ReferencesSection />
   </>
 );

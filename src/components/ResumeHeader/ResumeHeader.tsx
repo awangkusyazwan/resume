@@ -1,4 +1,12 @@
-import { Box, Column, Columns, Hidden, Stack } from 'braid-design-system';
+import {
+  Box,
+  Column,
+  Columns,
+  Hidden,
+  Spread,
+  Stack,
+  Inline,
+} from 'braid-design-system';
 
 import NameAndCredentials from './NameAndCredentials';
 import PointsOfContact from './PointsOfContact';
@@ -8,20 +16,15 @@ export const ResumeHeader = () => (
   <Box background="neutralSoft" borderRadius="large" padding="large">
     <Stack space="small">
       <NameAndCredentials />
-      <Hidden above="mobile">
-        <PointsOfContact />
-        <ProfessionalPortfolio />
-      </Hidden>
-      <Hidden below="tablet">
-        <Columns align="center" space="none">
-          <Column width="2/5">
-            <PointsOfContact />
-          </Column>
-          <Column>
-            <ProfessionalPortfolio />
-          </Column>
-        </Columns>
-      </Hidden>
+      <Box
+        display="flex"
+        alignItems={{ mobile: 'flexStart', tablet: 'center' }}
+      >
+        <Inline space="large" align="left" collapseBelow="tablet">
+          <PointsOfContact />
+          <ProfessionalPortfolio />
+        </Inline>
+      </Box>
     </Stack>
   </Box>
 );
