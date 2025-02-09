@@ -1,6 +1,10 @@
-export const AcademicBackgroundSection = () => {
+import { Box } from 'braid-design-system';
 
-    return (
-        
-    )
-}
+export const AcademicBackgroundSection = () => {
+  <Box
+    style={{
+      height: '500px',
+    }}
+    boxShadow="small"
+  />;
+};

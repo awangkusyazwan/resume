@@ -1,20 +1,28 @@
-import { Spread, Secondary, Notice, Link, Text } from "braid-design-system"
+import { Spread, Secondary, Notice, TextLink, Text } from 'braid-design-system';
 
 export const PageFooter = () => {
+  const author = 'Awangku Muhammad Syazwan bin Awangku Sazali';
 
-    return (
-        <Spread direction="horizontal" space="small">
+  const currentYear = new Date().getFullYear();
+
+  const hrefForSKU = 'https://seek-oss.github.io/sku/#/';
+  const hrefForBraid = 'https://seek-oss.github.io/braid-design-system/';
+  const hrefForReact = 'https://react.dev/';
+
+  return (
+    <Spread direction="horizontal" space="small">
       <Text size="xsmall">
         <Secondary>
-          2024 © Awangku Muhammad Syazwan bin Awangku Sazali
+          {currentYear} © {author}
         </Secondary>
       </Text>
       <Notice tone="info">
         <Text size="xsmall">
-          This resume is powered by <Link href="">SKU</Link>,{' '}
-          <Link href="">Braid</Link>, and{' '}<Link href="">React library</Link>.
+          This resume is powered by <TextLink href={hrefForSKU}>SKU</TextLink>,{' '}
+          <TextLink href={hrefForBraid}>Braid</TextLink>, and{' '}
+          <TextLink href={hrefForReact}>React</TextLink> library.
         </Text>
       </Notice>
     </Spread>
-    )
-}
+  );
+};
