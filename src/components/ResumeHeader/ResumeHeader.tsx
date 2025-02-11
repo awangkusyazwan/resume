@@ -1,12 +1,4 @@
-import {
-  Box,
-  Column,
-  Columns,
-  Hidden,
-  Spread,
-  Stack,
-  Inline,
-} from 'braid-design-system';
+import { Box, Stack, Inline } from 'braid-design-system';
 
 import NameAndCredentials from './NameAndCredentials';
 import PointsOfContact from './PointsOfContact';

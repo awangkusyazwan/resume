@@ -6,7 +6,7 @@ npm-debug.log
 .eslintrc
 .prettierrc
 coverage/
-github-pages/
+dist/
 report/
 tsconfig.json
 # end managed by sku
