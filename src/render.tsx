@@ -2,43 +2,31 @@ import { renderToString } from 'react-dom/server';
 import type { Render } from 'sku';
 
 import App from './App/App';
-import type { ClientContext } from './types';
 
 interface RenderContext {
-  appHtml: string;
+  html: string;
+  otherThing: number;
 }
 
-const skuRender: Render<RenderContext> = {
-  renderApp: ({ SkuProvider, environment }) => {
-    const appHtml = renderToString(
-      <SkuProvider>
-        <App environment={environment as ClientContext['environment']} />
-      </SkuProvider>,
-    );
-
-    return {
-      appHtml,
-    };
-  },
-
-  provideClientContext: ({ environment }) => ({
-    environment,
+export default {
+  renderApp: () => ({
+    html: renderToString(<App />),
+    otherThing: 10,
   }),
 
-  renderDocument: ({ app, bodyTags, headTags }) => `
+  renderDocument: ({ app, headTags, bodyTags }) => `
     <!DOCTYPE html>
     <html>
       <head>
         <meta charset="UTF-8">
+        <title>Resume</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         ${headTags}
       </head>
       <body>
-        <div id="app">${app.appHtml}</div>
+        <div id="app">${app.html}</div>
         ${bodyTags}
       </body>
     </html>
   `,
-};
-
-export default skuRender;
+} satisfies Render<RenderContext>;

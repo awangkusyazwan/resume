@@ -1,7 +1,7 @@
 {
   "name": "resume",
   "version": "0.1.0",
-  "homepage": "https://resume.awangkusyazwan.work",
+  "homepage": "https://awangkusyazwan.github.io/resume",
   "private": true,
   "scripts": {
     "start": "sku start",
@@ -9,9 +9,7 @@
     "build": "sku build",
     "serve": "sku serve",
     "lint": "sku lint",
-    "format": "sku format",
-    "predeploy": "run build",
-    "deploy": "gh-pages -d build"
+    "format": "sku format"
   },
   "dependencies": {
     "braid-design-system": "32.24.1",
@@ -26,7 +24,6 @@
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vanilla-extract/css": "^1.17.1",
-    "gh-pages": "^6.3.0",
     "sku": "^13.4.1",
     "storybook": "^8.5.3"
   },
