@@ -1,4 +1,4 @@
-import { Alert, Heading, Hidden, Spread, Text } from 'braid-design-system';
+import { Alert, Heading, Spread, Text } from 'braid-design-system';
 import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 
@@ -9,7 +9,7 @@ export const ResumeIsWIP = () => {
     setIsVisible(false);
   }
   return (
-    <Hidden print>
+    <>
       {isVisible && (
         <Fade>
           <Alert tone="positive" onClose={handleCloseNotice} closeLabel="Close">
@@ -32,7 +32,7 @@ export const ResumeIsWIP = () => {
           </Alert>
         </Fade>
       )}
-    </Hidden>
+    </>
   );
 };
 

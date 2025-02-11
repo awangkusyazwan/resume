@@ -1,8 +1,8 @@
 export const LinkedInLogo = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    height="40"
-    width="160"
+    height="25"
+    width="100"
     viewBox="-40.125525 -16.3118 347.75455 97.8708"
   >
     <title>LinkedIn logo</title>

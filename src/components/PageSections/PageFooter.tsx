@@ -13,7 +13,7 @@ export const PageFooter = () => {
     <Spread direction="horizontal" space="small">
       <Text size="xsmall">
         <Secondary>
-          {currentYear} © {author}
+          2022 - {currentYear} © {author}
         </Secondary>
       </Text>
       <Notice tone="info">

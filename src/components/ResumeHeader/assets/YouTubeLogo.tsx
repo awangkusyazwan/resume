@@ -1,14 +1,15 @@
 export const YouTubeLogo = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    height="40"
-    width="160"
+    height="25"
+    width="100"
     y="0"
     x="0"
     id="Layer_1"
     version="1.1"
     viewBox="-57.15 -21.25 495.3 127.5"
   >
+    <title>YouTube logo</title>
     <g id="g7433">
       <path
         id="path7429"

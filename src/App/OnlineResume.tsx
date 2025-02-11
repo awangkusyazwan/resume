@@ -5,7 +5,7 @@ import { PageContent } from '../components/PageSections/PageContent';
 import { PageFooter } from '../components/PageSections/PageFooter';
 import PageHeader from '../components/PageSections/PageHeader';
 
-export const Resume = () => (
+export const OnlineResume = () => (
   <PageBlock component="main" width="medium">
     <Box height="touchable" />
     <ResumeIsWIP />
@@ -17,4 +17,4 @@ export const Resume = () => (
   </PageBlock>
 );
 
-export default Resume;
+export default OnlineResume;

@@ -4,7 +4,9 @@ const skuConfig: SkuConfig = {
   clientEntry: 'src/client.tsx',
   renderEntry: 'src/render.tsx',
   environments: ['development', 'production'],
-  publicPath: '/path/to/public/assets/', // <-- Required for sku build output
+  publicPath: 'src/public',
+  target: 'github-pages',
+  srcPaths: ['src'],
 };
 
 export default skuConfig;
