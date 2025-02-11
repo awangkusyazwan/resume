@@ -3,7 +3,7 @@
 .eslintrc
 .prettierrc
 coverage/
-dist/
+github-pages/
 pnpm-lock.yaml
 report/
 tsconfig.json
