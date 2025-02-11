@@ -5,7 +5,8 @@ const skuConfig: SkuConfig = {
   renderEntry: 'src/render.tsx',
   environments: ['development', 'production'],
   publicPath: 'src/public',
-  target: 'dist',
+  target: 'github-pages',
+  srcPaths: ['src'],
 };
 
 export default skuConfig;
