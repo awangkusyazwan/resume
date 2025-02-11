@@ -5,7 +5,7 @@ import seekJobs from 'braid-design-system/themes/seekJobs';
 import { StrictMode } from 'react';
 
 import OnlineResume from './OnlineResume';
-import PaperResume from './PaperResume';
+import PaperResume from './PrintableResume';
 interface AppProps {
   environment: 'development' | 'production';
 }

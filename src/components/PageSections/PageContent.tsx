@@ -7,14 +7,12 @@ import {
   Tab,
   TabPanels,
   TabPanel,
-  Heading,
-  Alert,
-  Text,
 } from 'braid-design-system';
+
+import AcademicAndCredentialsSection from '../ResumeSections/AcademicAndCredentialsSection';
+import ProfessionalExperienceSection from '../ResumeSections/ProfessionalExperienceSection';
 import ReferencesSection from '../ResumeSections/ReferencesSection';
 import VolunteeringInterestSection from '../ResumeSections/VolunteeringInterestsSection';
-import ProfessionalExperienceSection from '../ResumeSections/ProfessionalExperienceSection';
-import AcademicAndCredentialsSection from '../ResumeSections/AcademicAndCredentialsSection';
 
 export const PageContent = () => (
   <>
