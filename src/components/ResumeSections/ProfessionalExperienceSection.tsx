@@ -1,6 +1,6 @@
 import { Box, List, Spread, Text } from 'braid-design-system';
 
-import { professionalExperiences as _professionalExperiences } from 'src/App/data/professional-experiences';
+import { professionalExperiences as _professionalExperiences } from 'src/App/data/data';
 
 export const ProfessionalExperienceSection = () => {
   const professionalExperiences = _professionalExperiences;
@@ -18,7 +18,7 @@ export const ProfessionalExperienceSection = () => {
       <hr />
       <Spread space="small">
         <i>{experience.position}</i>
-        <Text size="small">{experience.duration}</Text>
+        <Text size="small">{experience.tenure}</Text>
       </Spread>
       <Box marginY="small">
         <List space="xsmall">
