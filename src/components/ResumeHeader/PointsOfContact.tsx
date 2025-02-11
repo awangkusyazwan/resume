@@ -1,9 +1,6 @@
 import {
   Stack,
-  Inline,
   Box,
-  TooltipRenderer,
-  IconInfo,
   IconMail,
   TextLink,
   IconPhone,
