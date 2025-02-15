@@ -8,7 +8,9 @@ export const VolunteeringInterestSection = () => {
       paddingY="small"
       overflow="auto"
       style={{ height: '600px' }}
-    ></Box>
+    >
+      {/* Volunteering Interests */}
+    </Box>
   );
 };
 

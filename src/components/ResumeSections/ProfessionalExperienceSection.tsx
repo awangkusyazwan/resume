@@ -25,7 +25,9 @@ export const ProfessionalExperienceSection = () => {
           </Spread>
           <Box marginY="xxsmall" />
           <Spread space="small" alignY="center">
-            <i>{experience.position}</i>
+            <Text size="small">
+              <i>{experience.position}</i>
+            </Text>
             <Text size="small">{experience.tenure}</Text>
           </Spread>
           <Box marginY="small">
