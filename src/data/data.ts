@@ -33,6 +33,7 @@ interface Certifications extends ProfessionalCredentials {
 
 interface VolunteeringExperience {
   organization: string;
+  location: string;
   position: string;
   tenure: string;
   rolesAndAchievements: string[];
@@ -139,6 +140,19 @@ export const certifications: Certifications[] = [
   },
 ];
 
+export const volunteeringExperiences: VolunteeringExperience[] = [
+  {
+    organization: "Engineers Australia Swinburne Sarawak Student Society",
+    location: "Kuching, Malaysia",
+    position: "Event Volunteer, Frontier Engineers Australia",
+    tenure: "April - May 2019",
+    rolesAndAchievements: [
+      "Promoted the organizing of a full-day networking masterclass event under the Engineers Australia Malaysia Chapter Frontier program over 14 days before the event takes place",
+      "Facilitated the registration of 20+ EA student members’ interest to partake in the Frontier event",
+      "Facilitated the application for student membership the Institution of Engineers, Australia of 20+ eligible students enrolled at Swinburne Sarawak",
+    ],
+  },
+];
 export const categorisedSkills: Skills[] = [
   {
     category: "Technical",
@@ -165,7 +179,7 @@ export const categorisedSkills: Skills[] = [
   },
   {
     category: "Languages",
-    skills: ["English", "Bahasa Malaysia"],
+    skills: ["English ● CEFR C2 Proficient", "Bahasa Malaysia ● Native"],
     badgeTone: "promote",
   },
 ];
