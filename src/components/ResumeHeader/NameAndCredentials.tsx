@@ -1,4 +1,4 @@
-import { Stack, Secondary, Text } from 'braid-design-system';
+import { Stack, Secondary, Text, Heading } from 'braid-design-system';
 
 const NameAndCredentials = () => {
   const name = 'Awangku Muhammad Syazwan bin Awangku Sazali';
@@ -6,9 +6,9 @@ const NameAndCredentials = () => {
 
   return (
     <Stack space="xsmall">
-      <Text size="large" weight="strong" align="left">
+      <Heading level="2" align="left">
         {name}
-      </Text>
+      </Heading>
       <Text size="small">
         <Secondary>{credentials.join(' • ')}</Secondary>
       </Text>
