@@ -1,10 +1,8 @@
-import type { SkuConfig } from 'sku';
+import type { SkuConfig } from "sku";
 
 const skuConfig: SkuConfig = {
-  clientEntry: 'src/client.tsx',
-  renderEntry: 'src/render.tsx',
-  environments: ['development', 'production'],
-  publicPath: 'src',
+  clientEntry: "src/client.tsx",
+  renderEntry: "src/render.tsx",
 };
 
 export default skuConfig;
