@@ -1,9 +1,10 @@
-import { Box } from 'braid-design-system';
+import { Box } from "braid-design-system";
+import React from "react";
 
 export const VolunteeringInterestSection = () => (
   <Box
     style={{
-      height: '500px',
+      height: "500px",
     }}
     boxShadow="small"
   />

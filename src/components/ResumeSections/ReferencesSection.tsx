@@ -1,4 +1,5 @@
 import { Alert, Box, Heading, Stack, Text } from 'braid-design-system';
+import React from 'react';
 
 export const ReferencesSection = () => (
   <>

@@ -3,16 +3,17 @@ import type { Render } from "sku";
 
 import App from "./App/App";
 import type { ClientContext } from "./types";
+import React from "react";
 
 interface RenderContext {
   appHtml: string;
 }
 
 const skuRender: Render<RenderContext> = {
-  renderApp: ({ SkuProvider, environment }) => {
+  renderApp: ({ SkuProvider }) => {
     const appHtml = renderToString(
       <SkuProvider>
-        <App environment={environment as ClientContext["environment"]} />
+        <App />
       </SkuProvider>
     );
 
@@ -20,10 +21,6 @@ const skuRender: Render<RenderContext> = {
       appHtml,
     };
   },
-
-  provideClientContext: ({ environment }) => ({
-    environment,
-  }),
 
   renderDocument: ({ app, bodyTags, headTags }) => `
     <!DOCTYPE html>

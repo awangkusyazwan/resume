@@ -1,6 +1,7 @@
-import { Box, List, Spread, Text } from 'braid-design-system';
+import { Box, List, Spread, Text } from "braid-design-system";
+import React from "react";
 
-import { professionalExperiences as _professionalExperiences } from 'src/App/data/data';
+import { professionalExperiences as _professionalExperiences } from "../../data/data";
 
 export const ProfessionalExperienceSection = () => {
   const professionalExperiences = _professionalExperiences;

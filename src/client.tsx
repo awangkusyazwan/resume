@@ -1,11 +1,7 @@
-import { hydrateRoot } from 'react-dom/client';
+import { hydrateRoot } from "react-dom/client";
 
-import App from './App/App';
-import type { ClientContext } from './types';
+import App from "./App/App";
 
-export default ({ environment }: ClientContext) => {
-  hydrateRoot(
-    document.getElementById('app')!,
-    <App environment={environment} />,
-  );
+export default () => {
+  hydrateRoot(document.getElementById("app")!, <App />);
 };
