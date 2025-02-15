@@ -8,7 +8,7 @@ export const VolunteeringInterestSection = () => {
       marginBottom="medium"
       paddingY="small"
       overflow="auto"
-      style={{ height: '600px' }}
+      style={{ height: '550px' }}
     >
       {/* Volunteering Interests */}
       {volunteeringExperiences.map((volunteeringExperience, index) => (
@@ -17,7 +17,7 @@ export const VolunteeringInterestSection = () => {
             <Text size="large" weight="strong">
               {volunteeringExperience.organization}
             </Text>
-            <Text size="large" weight="strong">
+            <Text size="large" weight="strong" align="right">
               {volunteeringExperience.location}
             </Text>
           </Spread>
@@ -26,7 +26,9 @@ export const VolunteeringInterestSection = () => {
             <Text size="small">
               <i>{volunteeringExperience.position}</i>
             </Text>
-            <Text size="small">{volunteeringExperience.tenure}</Text>
+            <Text size="small" align="right">
+              {volunteeringExperience.tenure}
+            </Text>
           </Spread>
           <Box marginY="small">
             <List space="xsmall">

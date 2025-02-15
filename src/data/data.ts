@@ -1,5 +1,5 @@
 import { Badge } from 'braid-design-system';
-import { ComponentProps } from 'react';
+import type { ComponentProps } from 'react';
 
 interface ProfessionalExperience {
   employer: string;

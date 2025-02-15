@@ -1,4 +1,4 @@
-import { Box, Badge, Inline, Text, Stack } from 'braid-design-system';
+import { Box, Badge, Inline, Stack, Heading } from 'braid-design-system';
 
 import { categorisedSkills as _categorisedSkills } from 'src/data/data';
 
@@ -8,7 +8,7 @@ export const SkillsSection = () => {
   return (
     <Box marginBottom="medium">
       <Stack space="small">
-        <Text weight="strong">Skills</Text>
+        <Heading level="4">Skills</Heading>
         <Inline space="xsmall">
           {categorisedSkills.map((category) =>
             category.skills.map((skill, index) => (

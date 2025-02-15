@@ -18,7 +18,7 @@ export const AcademicAndCredentialsSection = () => {
       marginBottom="medium"
       paddingY="small"
       overflow="auto"
-      style={{ height: '600px' }}
+      style={{ height: '550px' }}
     >
       {academicBackgrounds.map((academicBackground, index) => (
         <Box key={`academicBackground-${index}`} marginBottom="medium">
@@ -26,7 +26,7 @@ export const AcademicAndCredentialsSection = () => {
             <Text size="large" weight="strong">
               {academicBackground.institution}
             </Text>
-            <Text size="large" weight="strong">
+            <Text size="large" weight="strong" align="right">
               {academicBackground.location}
             </Text>
           </Spread>
@@ -39,7 +39,9 @@ export const AcademicAndCredentialsSection = () => {
                 </a>
               </i>
             </Text>
-            <Text size="small">{academicBackground.tenure}</Text>
+            <Text size="small" align="right">
+              {academicBackground.tenure}
+            </Text>
           </Spread>
           <Box marginY="small">
             <List space="xsmall">
@@ -73,7 +75,9 @@ export const AcademicAndCredentialsSection = () => {
               {')'}
             </Text>
             {professionalCredential.expiryDate ? (
-              <Text size="small">{professionalCredential.expiryDate}</Text>
+              <Text size="small" align="right">
+                {professionalCredential.expiryDate}
+              </Text>
             ) : null}
           </Spread>
         </Box>
@@ -94,6 +98,14 @@ export const AcademicAndCredentialsSection = () => {
               </a>
             </Text>
           </Spread>
+          <Box marginY="xsmall" />
+          <List space="xsmall">
+            {certification.scores?.map((score, index) => (
+              <Text size="small" key={`score-${index}`}>
+                {score}
+              </Text>
+            ))}
+          </List>
         </Box>
       ))}
     </Box>

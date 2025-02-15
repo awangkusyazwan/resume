@@ -11,7 +11,7 @@ export const ProfessionalExperienceSection = () => {
       marginBottom="medium"
       paddingY="small"
       overflow="auto"
-      style={{ height: '600px' }}
+      style={{ height: '550px' }}
     >
       {professionalExperiences.map((experience, index) => (
         <Box key={index} marginBottom="medium">
@@ -19,7 +19,7 @@ export const ProfessionalExperienceSection = () => {
             <Text size="large" weight="strong">
               {experience.employer}
             </Text>
-            <Text size="large" weight="strong">
+            <Text size="large" weight="strong" align="right">
               {experience.location}
             </Text>
           </Spread>
@@ -28,7 +28,9 @@ export const ProfessionalExperienceSection = () => {
             <Text size="small">
               <i>{experience.position}</i>
             </Text>
-            <Text size="small">{experience.tenure}</Text>
+            <Text size="small" align="right">
+              {experience.tenure}
+            </Text>
           </Spread>
           <Box marginY="small">
             <List space="xsmall">

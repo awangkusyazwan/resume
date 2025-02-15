@@ -1,4 +1,4 @@
-import { Alert, Heading, Spread, Text } from 'braid-design-system';
+import { Alert, Box, Heading, Spread, Text } from 'braid-design-system';
 import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 
@@ -26,6 +26,7 @@ export const ResumeIsWIP = () => {
             <Text> Thank you for your understanding and kind cooperation.</Text>
           </Spread>
         </Alert>
+        <Box height="touchable" />
       </Fade>
     )
   );

@@ -11,8 +11,13 @@ export const ResumeHeader = () => (
       <Box
         display="flex"
         alignItems={{ mobile: 'flexStart', tablet: 'center' }}
+        justifyContent={{ mobile: 'center', tablet: 'spaceBetween' }}
       >
-        <Inline space="large" align="left" collapseBelow="tablet">
+        <Inline
+          space="large"
+          align={{ mobile: 'center', tablet: 'left' }}
+          collapseBelow="tablet"
+        >
           <PointsOfContact />
           <ProfessionalPortfolio />
         </Inline>
