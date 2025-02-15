@@ -6,10 +6,10 @@ const NameAndCredentials = () => {
 
   return (
     <Stack space="xsmall">
-      <Heading level="2" align="left">
+      <Heading level="2" align={{ mobile: 'center', tablet: 'left' }}>
         {name}
       </Heading>
-      <Text size="small">
+      <Text size="small" align={{ mobile: 'center', tablet: 'left' }}>
         <Secondary>{credentials.join(' • ')}</Secondary>
       </Text>
     </Stack>
