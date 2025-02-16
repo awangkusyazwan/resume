@@ -10,7 +10,7 @@ export const ResumeHeader = () => (
     borderRadius="large"
     paddingTop="medium"
     paddingBottom="xsmall"
-    paddingX={{ mobile: 'small', tablet: 'medium' }}
+    paddingX={{ mobile: 'xsmall', tablet: 'medium' }}
   >
     <Stack space="small">
       <NameAndCredentials />
