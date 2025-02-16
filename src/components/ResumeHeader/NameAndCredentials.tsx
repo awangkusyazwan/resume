@@ -1,19 +1,49 @@
-import { Stack, Secondary, Text, Heading } from 'braid-design-system';
+import {
+  Stack,
+  Secondary,
+  Text,
+  Heading,
+  IconPrint,
+  Spread,
+  ButtonIcon,
+} from 'braid-design-system';
+import { Hidden } from 'node_modules/braid-design-system/dist';
+import { Link } from 'react-router-dom';
 
-const NameAndCredentials = () => {
+const NameAndCredentials = ({
+  isOnlineResume = true,
+}: {
+  isOnlineResume?: boolean;
+}) => {
   const name = 'Awangku Muhammad Syazwan bin Awangku Sazali';
   const credentials = ['BEng (Hons)', 'MBCS'];
 
   return (
     <Stack space="xsmall">
-      <Heading level="2" align={{ mobile: 'center', tablet: 'left' }}>
-        {name}
-      </Heading>
-      <Text size="small" align={{ mobile: 'center', tablet: 'left' }}>
+      <Spread space="small" alignY="top">
+        <Heading level="2" align="left">
+          {name}
+        </Heading>
+        {isOnlineResume ? (
+          <Link to="/printable" target="_blank">
+            <IconPrint size="xsmall" />
+          </Link>
+        ) : (
+          <Hidden print>
+            <ButtonIcon
+              label="Print"
+              id="print-resume"
+              icon={<IconPrint />}
+              onClick={() => window.print()}
+              size="small"
+            />
+          </Hidden>
+        )}
+      </Spread>
+      <Text size="small" align="left">
         <Secondary>{credentials.join(' • ')}</Secondary>
       </Text>
     </Stack>
-    
   );
 };
 
