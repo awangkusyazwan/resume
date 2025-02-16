@@ -3,11 +3,11 @@ import {
   Secondary,
   Text,
   Heading,
+  Hidden,
   IconPrint,
   Spread,
   ButtonIcon,
 } from 'braid-design-system';
-import { Hidden } from 'node_modules/braid-design-system/dist';
 import { Link } from 'react-router-dom';
 
 const NameAndCredentials = ({
