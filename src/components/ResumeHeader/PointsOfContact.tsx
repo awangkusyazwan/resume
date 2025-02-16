@@ -9,7 +9,7 @@ import {
 } from 'braid-design-system';
 
 const PointsOfContact = () => {
-  const phoneNumber = '+60178994995';
+  const phoneNumber = '+60168093948';
   const email = 'me@awangkusyazwan.work';
   const website = 'awangkusyazwan.work';
 

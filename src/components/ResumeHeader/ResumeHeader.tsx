@@ -19,11 +19,7 @@ export const ResumeHeader = () => (
         alignItems={{ mobile: 'flexStart', tablet: 'center' }}
         justifyContent={{ mobile: 'center', tablet: 'spaceBetween' }}
       >
-        <Inline
-          space="large"
-          align={{ mobile: 'center', tablet: 'left' }}
-          collapseBelow="tablet"
-        >
+        <Inline space="large" align={{ mobile: 'center', tablet: 'left' }}>
           <PointsOfContact />
           <Profiles />
         </Inline>

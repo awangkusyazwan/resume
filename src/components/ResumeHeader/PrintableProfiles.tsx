@@ -1,4 +1,4 @@
-import { Text, Inline } from 'braid-design-system';
+import { Text, Inline, Box } from 'braid-design-system';
 
 import { GitHubLogo } from './assets/GitHubLogo';
 import { LinkedInLogo } from './assets/LinkedInLogo';
@@ -12,9 +12,11 @@ const Profiles = () => {
 
   return (
     <Inline space="small" alignY="center" align="left">
-      <Text weight="strong" tone="promote" size="small">
-        My Profiles
-      </Text>
+      <Box justifyContent="center">
+        <Text weight="strong" tone="promote" size="small">
+          My Profiles
+        </Text>
+      </Box>
       <Inline space="xxsmall" align="left" alignY="center">
         <Logo href={hrefLinkedIn} logo={<LinkedInLogo />} />
         <Logo href={hrefYouTube} logo={<YouTubeLogo />} />
