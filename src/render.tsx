@@ -5,22 +5,20 @@ import type { Render } from 'sku';
 import App from './App/App';
 
 export default {
-  renderApp: ({ SkuProvider, route }) => {
-    return renderToString(
+  renderApp: ({ SkuProvider, route }) =>
+    renderToString(
       <SkuProvider>
         <StaticRouter location={route}>
           <App />
         </StaticRouter>
       </SkuProvider>,
-    );
-  },
+    ),
 
-  renderDocument: ({ app, bodyTags, headTags }) => {
-    return `
+  renderDocument: ({ app, bodyTags, headTags }) => `
       <!DOCTYPE html>
       <html>
         <head>
-          <title>hello-world</title>
+          <title>Syazwan's Resume</title>
           ${headTags}
         </head>
         <body>
@@ -28,6 +26,5 @@ export default {
           ${bodyTags}
         </body>
       </html>
-    `;
-  },
+    `,
 } satisfies Render;
