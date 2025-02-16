@@ -5,7 +5,13 @@ import PointsOfContact from './PointsOfContact';
 import ProfessionalPortfolio from './ProfessionalPortfolio';
 
 export const ResumeHeader = () => (
-  <Box background="neutralSoft" borderRadius="large" padding="large">
+  <Box
+    background="neutralSoft"
+    borderRadius="large"
+    paddingTop="medium"
+    paddingBottom="xsmall"
+    paddingX={{ mobile: 'small', tablet: 'medium' }}
+  >
     <Stack space="small">
       <NameAndCredentials />
       <Box
