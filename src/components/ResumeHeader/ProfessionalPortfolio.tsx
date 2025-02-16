@@ -12,7 +12,12 @@ const ProfessionalPortfolio = () => {
 
   return (
     <Stack space="small">
-      <Text weight="strong" tone="promote" size="small" align="left">
+      <Text
+        weight="strong"
+        tone="promote"
+        size="small"
+        align={{ mobile: 'center', tablet: 'left' }}
+      >
         My Profiles
       </Text>
       <Inline
