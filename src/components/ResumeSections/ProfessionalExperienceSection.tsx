@@ -2,19 +2,15 @@ import { Box, List, Spread, Text } from 'braid-design-system';
 import React from 'react';
 
 import { professionalExperiences as _professionalExperiences } from '../../data/data';
+import SectionWrapper from '../Wrappers/SectionWrapper';
 
 export const ProfessionalExperienceSection = () => {
   const professionalExperiences = _professionalExperiences;
 
   return (
-    <Box
-      marginBottom="medium"
-      paddingY="small"
-      overflow="auto"
-      style={{ height: '550px' }}
-    >
+    <>
       {professionalExperiences.map((experience, index) => (
-        <Box key={index} marginBottom="medium">
+        <Box key={index} marginBottom="medium" style={{ breakInside: 'avoid' }}>
           <Spread space="small">
             <Text size="large" weight="strong">
               {experience.employer}
@@ -35,13 +31,15 @@ export const ProfessionalExperienceSection = () => {
           <Box marginY="small">
             <List space="xsmall">
               {experience.rolesAndAchievements.map((roleAndAchievement) => (
-                <Text key={roleAndAchievement}>{roleAndAchievement}</Text>
+                <Text key={roleAndAchievement} size="small">
+                  {roleAndAchievement}
+                </Text>
               ))}
             </List>
           </Box>
         </Box>
       ))}
-    </Box>
+    </>
   );
 };
 

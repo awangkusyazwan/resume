@@ -18,6 +18,7 @@ import ReferencesSection from '../ResumeSections/ReferencesSection';
 import VolunteeringInterestSection from '../ResumeSections/VolunteeringInterestsSection';
 import React from 'react';
 import { SkillsSection } from '../ResumeSections/SkillsSection';
+import SectionWrapper from '../Wrappers/SectionWrapper';
 
 export const PageContent = () => (
   <>
@@ -34,13 +35,19 @@ export const PageContent = () => (
           </Tabs>
           <TabPanels>
             <TabPanel>
-              <ProfessionalExperienceSection />
+              <SectionWrapper>
+                <ProfessionalExperienceSection />
+              </SectionWrapper>
             </TabPanel>
             <TabPanel>
-              <AcademicAndCredentialsSection />
+              <SectionWrapper>
+                <AcademicAndCredentialsSection />
+              </SectionWrapper>
             </TabPanel>
             <TabPanel>
-              <VolunteeringInterestSection />
+              <SectionWrapper>
+                <VolunteeringInterestSection />
+              </SectionWrapper>
             </TabPanel>
           </TabPanels>
         </Stack>

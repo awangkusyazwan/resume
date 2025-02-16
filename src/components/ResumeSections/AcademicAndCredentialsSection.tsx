@@ -11,17 +11,14 @@ export const AcademicAndCredentialsSection = () => {
   const professionalCredentials = _professionalCredentials;
   const certifications = _certifications;
 
-  const HEADING_SPACE = 'xxsmall';
-
   return (
-    <Box
-      marginBottom="medium"
-      paddingY="small"
-      overflow="auto"
-      style={{ height: '550px' }}
-    >
+    <>
       {academicBackgrounds.map((academicBackground, index) => (
-        <Box key={`academicBackground-${index}`} marginBottom="medium">
+        <Box
+          key={`academicBackground-${index}`}
+          marginBottom="medium"
+          style={{ breakInside: 'avoid' }}
+        >
           <Spread space="small" alignY="center">
             <Text size="large" weight="strong">
               {academicBackground.institution}
@@ -30,7 +27,7 @@ export const AcademicAndCredentialsSection = () => {
               {academicBackground.location}
             </Text>
           </Spread>
-          <Box marginY="xxsmall" />
+          <Box marginTop="xxsmall" />
           <Spread space="small">
             <Text size="small">
               <i>
@@ -47,7 +44,7 @@ export const AcademicAndCredentialsSection = () => {
             <List space="xsmall">
               {academicBackground.rolesAndAchievements.map(
                 (roleAndAchievement, index) => (
-                  <Text key={`roleAndAchievement-${index}`}>
+                  <Text key={`roleAndAchievement-${index}`} size="small">
                     {roleAndAchievement}
                   </Text>
                 ),
@@ -57,7 +54,11 @@ export const AcademicAndCredentialsSection = () => {
         </Box>
       ))}
       {professionalCredentials.map((professionalCredential, index) => (
-        <Box key={`professionalCredential-${index}`} marginBottom="medium">
+        <Box
+          key={`professionalCredential-${index}`}
+          marginBottom="medium"
+          style={{ breakInside: 'avoid' }}
+        >
           <Text size="large" weight="strong">
             {professionalCredential.title}
           </Text>
@@ -83,7 +84,11 @@ export const AcademicAndCredentialsSection = () => {
         </Box>
       ))}
       {certifications.map((certification, index) => (
-        <Box key={`certification-${index}`} marginBottom="medium">
+        <Box
+          key={`certification-${index}`}
+          marginBottom="medium"
+          style={{ breakInside: 'avoid' }}
+        >
           <Spread space="small" alignY="center">
             <Text size="large" weight="strong">
               {certification.title}
@@ -108,7 +113,7 @@ export const AcademicAndCredentialsSection = () => {
           </List>
         </Box>
       ))}
-    </Box>
+    </>
   );
 };
 export default AcademicAndCredentialsSection;

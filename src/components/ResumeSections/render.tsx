@@ -2,25 +2,24 @@ import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import type { Render } from 'sku';
 
-import App from './App/App';
+import App from '.';
 
 export default {
-  renderApp: ({ SkuProvider, route }) => {
-    return renderToString(
+  renderApp: ({ SkuProvider, route }) =>
+    renderToString(
       <SkuProvider>
         <StaticRouter location={route}>
           <App />
         </StaticRouter>
       </SkuProvider>,
-    );
-  },
+    ),
 
-  renderDocument: ({ app, bodyTags, headTags }) => {
-    return `
+  renderDocument: ({ app, bodyTags, headTags }) => `
       <!DOCTYPE html>
       <html>
         <head>
-          <title>hello-world</title>
+          <title>Syazwan's Resume</title>
+          <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
           ${headTags}
         </head>
         <body>
@@ -28,6 +27,5 @@ export default {
           ${bodyTags}
         </body>
       </html>
-    `;
-  },
+    `,
 } satisfies Render;

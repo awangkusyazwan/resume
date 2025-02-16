@@ -1,18 +1,17 @@
 import { Box, List, Spread, Text } from 'braid-design-system';
 import { volunteeringExperiences as _volunteeringExperiences } from 'src/data/data';
+import SectionWrapper from '../Wrappers/SectionWrapper';
 export const VolunteeringInterestSection = () => {
   const volunteeringExperiences = _volunteeringExperiences;
 
   return (
-    <Box
-      marginBottom="medium"
-      paddingY="small"
-      overflow="auto"
-      style={{ height: '550px' }}
-    >
-      {/* Volunteering Interests */}
+    <>
       {volunteeringExperiences.map((volunteeringExperience, index) => (
-        <Box key={`volunteeringExperience-${index}`} marginBottom="medium">
+        <Box
+          key={`volunteeringExperience-${index}`}
+          marginBottom="medium"
+          style={{ breakInside: 'avoid' }}
+        >
           <Spread space="small" alignY="center">
             <Text size="large" weight="strong">
               {volunteeringExperience.organization}
@@ -34,7 +33,7 @@ export const VolunteeringInterestSection = () => {
             <List space="xsmall">
               {volunteeringExperience.rolesAndAchievements.map(
                 (roleAndAchievement, index) => (
-                  <Text key={`roleAndAchievement-${index}`}>
+                  <Text key={`roleAndAchievement-${index}`} size="small">
                     {roleAndAchievement}
                   </Text>
                 ),
@@ -43,7 +42,7 @@ export const VolunteeringInterestSection = () => {
           </Box>
         </Box>
       ))}
-    </Box>
+    </>
   );
 };
 

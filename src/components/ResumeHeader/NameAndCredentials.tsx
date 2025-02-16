@@ -13,6 +13,7 @@ const NameAndCredentials = () => {
         <Secondary>{credentials.join(' • ')}</Secondary>
       </Text>
     </Stack>
+    
   );
 };
 

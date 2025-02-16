@@ -6,7 +6,7 @@ export const SkillsSection = () => {
   const categorisedSkills = _categorisedSkills;
 
   return (
-    <Box marginBottom="medium">
+    <Box>
       <Stack space="small">
         <Heading level="4">Skills</Heading>
         <Inline space="xsmall">

@@ -1,31 +1,28 @@
 import { Box, Stack, Inline } from 'braid-design-system';
 
 import NameAndCredentials from './NameAndCredentials';
-import PointsOfContact from './PointsOfContact';
-import Profiles from './Profiles';
+import PrintablePointsOfContact from './PrintablePointsOfContact';
+import PrintableProfiles from './PrintableProfiles';
 
-export const ResumeHeader = () => (
+export const PrintableResumeHeader = () => (
   <Box
     background="neutralSoft"
     borderRadius="large"
     paddingTop="medium"
     paddingBottom="xsmall"
     paddingX={{ mobile: 'xsmall', tablet: 'medium' }}
+    marginY="small"
   >
     <Stack space="small">
       <NameAndCredentials />
       <Box
         display="flex"
         alignItems={{ mobile: 'flexStart', tablet: 'center' }}
-        justifyContent={{ mobile: 'center', tablet: 'spaceBetween' }}
+        justifyContent={{ mobile: 'flexStart', tablet: 'spaceBetween' }}
       >
-        <Inline
-          space="large"
-          align={{ mobile: 'center', tablet: 'left' }}
-          collapseBelow="tablet"
-        >
-          <PointsOfContact />
-          <Profiles />
+        <Inline space="small" collapseBelow="tablet">
+          <PrintablePointsOfContact />
+          <PrintableProfiles />
         </Inline>
       </Box>
     </Stack>

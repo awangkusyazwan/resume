@@ -1,7 +1,7 @@
 import { hydrateRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 
 import App from './App/App';
-import { BrowserRouter } from 'node_modules/react-router-dom/dist';
 
 export default () => {
   hydrateRoot(
