@@ -3,9 +3,15 @@ import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 
 export const ResumeIsWIP = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  if (global.sessionStorage.getItem('ResumeIsWIP') === null) {
+    global.sessionStorage.setItem('ResumeIsWIP', 'true');
+  }
+
+  const displayNotice = global.sessionStorage.getItem('ResumeIsWIP') === 'true';
+  const [isVisible, setIsVisible] = useState(displayNotice);
 
   function handleCloseNotice() {
+    global.sessionStorage.setItem('ResumeIsWIP', 'false');
     setIsVisible(false);
   }
 
