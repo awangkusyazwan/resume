@@ -1,3 +1,6 @@
+import { Badge } from 'braid-design-system';
+import type { ComponentProps } from 'react';
+
 interface ProfessionalExperience {
   employer: string;
   location: string;
@@ -25,7 +28,21 @@ interface ProfessionalCredentials {
 
 interface Certifications extends ProfessionalCredentials {
   type: 'Academic' | 'Professional' | 'Skill' | 'Other';
-  score?: string;
+  scores?: string[];
+}
+
+interface VolunteeringExperience {
+  organization: string;
+  location: string;
+  position: string;
+  tenure: string;
+  rolesAndAchievements: string[];
+}
+
+interface Skills {
+  category: string;
+  skills: string[];
+  badgeTone: ComponentProps<typeof Badge>['tone'];
 }
 
 export const professionalExperiences: ProfessionalExperience[] = [
@@ -65,12 +82,12 @@ export const professionalExperiences: ProfessionalExperience[] = [
   {
     employer: 'PETRONAS Carigali Sdn. Bhd.',
     location: 'Miri, Malaysia',
-    position: 'Industrial Trainee (Instrumentation Engineering',
+    position: 'Industrial Trainee (Instrumentation Engineering)',
     tenure: 'December 2019 – February 2020 ',
     rolesAndAchievements: [
       'Conducted reaffirmation of IPF (Instrumented Protective Function) studies and recommendations made by in-house consultants reportable to section TP (Technical Professional)',
       'Conducted the conceptual study for IPF recommendations for 1 instrument at the Temana-B asset and presented a summary of the study to department executives',
-      'Collaboratively diagnosed and reassessed the Safety Impact Level (SIL) matrix for a chemical injection tank level IPF at an in-field asset with on-site operators, consultants, executive and department manager',
+      'Collaboratively reassessed the Safety Impact Level (SIL) matrix for a chemical injection tank level IPF at an in-field asset with on-site operators, consultants, executive and department manager',
     ],
   },
 ];
@@ -81,7 +98,7 @@ export const academicBackgrounds: AcademicBackground[] = [
     location: 'Kuching, Malaysia',
     qualification: 'BEng (Hons) Robotics and Mechatronics',
     tenure: 'February 2017 – March 2021',
-    hrefForCredential: 'https://www.swinburne.edu.my/',
+    hrefForCredential: 'https://app.box.com/s/uykc33r78a1opzcbte8nl3yfp5s1rl2j',
     rolesAndAchievements: [
       'CGPA: 3.4.0/4.00',
       'Final Year Honours Project: Portable Multi-Position Vibration Data Acquisition (DAQ) Device',
@@ -106,13 +123,63 @@ export const certifications: Certifications[] = [
     title: 'EF SET Certification - English',
     hrefForCredential: 'https://cert.efset.org/en/c43tmF',
     type: 'Skill',
-    score: 'C2 Proficient',
+    scores: [
+      'CEFR Rating: C2 Proficient',
+      'Reading: 78/100',
+      'Listening: 90/100',
+      'Writing: 79/100',
+      'Speaking: 84/100',
+    ],
   },
   {
     awardingInstitution: 'Sarawak Skills Development Centre (PPKS)',
     title: 'Expert Craftsman Programme (Mechatronics)',
     hrefForCredential: 'https://app.box.com/s/b8p99fjz547o5zqfxgfg52bvg8l2m8ds',
     type: 'Skill',
-    score: 'Theory: 94/100, Practical: 96/100',
+    scores: ['Theory: 94/100', 'Practical: 96/100'],
+  },
+];
+
+export const volunteeringExperiences: VolunteeringExperience[] = [
+  {
+    organization: 'Engineers Australia Swinburne Sarawak Student Society',
+    location: 'Kuching, Malaysia',
+    position: 'Event Volunteer, Frontier Engineers Australia',
+    tenure: 'April - May 2019',
+    rolesAndAchievements: [
+      'Promoted the organizing of a full-day networking masterclass event under the Engineers Australia Malaysia Chapter Frontier program over 14 days before the event takes place',
+      'Facilitated the registration of 20+ EA student members’ interest to partake in the Frontier event',
+      'Facilitated the application for student membership the Institution of Engineers, Australia of 20+ eligible students enrolled at Swinburne Sarawak',
+    ],
+  },
+];
+export const categorisedSkills: Skills[] = [
+  {
+    category: 'Technical',
+    skills: [
+      'TypeScript',
+      'JavaScript',
+      'GraphQL',
+      'Node.js',
+      'Python',
+      'React',
+      'React Testing Library',
+      'Jest',
+      'C++',
+      'C#',
+      'AWS',
+      'HTML',
+      'CSS',
+      'Cypress',
+      'Datadog',
+      'Git',
+      'CI/CD',
+    ],
+    badgeTone: 'positive',
+  },
+  {
+    category: 'Languages',
+    skills: ['English ● CEFR C2 Proficient', 'Bahasa Malaysia ● Native'],
+    badgeTone: 'promote',
   },
 ];

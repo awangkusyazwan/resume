@@ -6,11 +6,8 @@ import { StrictMode } from 'react';
 
 import OnlineResume from './OnlineResume';
 import PaperResume from './PrintableResume';
-interface AppProps {
-  environment: 'development' | 'production';
-}
 
-export default ({ environment }: AppProps) => (
+export default () => (
   <StrictMode>
     <BraidProvider theme={seekJobs}>
       <Hidden print>

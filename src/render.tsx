@@ -1,29 +1,26 @@
-import { renderToString } from 'react-dom/server';
-import type { Render } from 'sku';
+import { renderToString } from "react-dom/server";
+import type { Render } from "sku";
 
-import App from './App/App';
-import type { ClientContext } from './types';
+import App from "./App/App";
+
+import React from "react";
 
 interface RenderContext {
   appHtml: string;
 }
 
 const skuRender: Render<RenderContext> = {
-  renderApp: ({ SkuProvider, environment }) => {
+  renderApp: ({ SkuProvider }) => {
     const appHtml = renderToString(
       <SkuProvider>
-        <App environment={environment as ClientContext['environment']} />
-      </SkuProvider>,
+        <App />
+      </SkuProvider>
     );
 
     return {
       appHtml,
     };
   },
-
-  provideClientContext: ({ environment }) => ({
-    environment,
-  }),
 
   renderDocument: ({ app, bodyTags, headTags }) => `
     <!DOCTYPE html>

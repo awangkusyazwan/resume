@@ -20,7 +20,12 @@ const PointsOfContact = () => {
   return (
     <>
       <Stack space="xxsmall">
-        <Text weight="strong" tone="promote" size="small">
+        <Text
+          weight="strong"
+          tone="promote"
+          align={{ mobile: 'center', tablet: 'left' }}
+          size="small"
+        >
           Points-of-contact
         </Text>
         <Text size="small" icon={<IconMail tone="positive" />}>

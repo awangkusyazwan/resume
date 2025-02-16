@@ -1,12 +1,50 @@
-import { Box } from 'braid-design-system';
+import { Box, List, Spread, Text } from 'braid-design-system';
+import { volunteeringExperiences as _volunteeringExperiences } from 'src/data/data';
+export const VolunteeringInterestSection = () => {
+  const volunteeringExperiences = _volunteeringExperiences;
 
-export const VolunteeringInterestSection = () => (
-  <Box
-    style={{
-      height: '500px',
-    }}
-    boxShadow="small"
-  />
-);
+  return (
+    <Box
+      marginBottom="medium"
+      paddingY="small"
+      overflow="auto"
+      style={{ height: '550px' }}
+    >
+      {/* Volunteering Interests */}
+      {volunteeringExperiences.map((volunteeringExperience, index) => (
+        <Box key={`volunteeringExperience-${index}`} marginBottom="medium">
+          <Spread space="small" alignY="center">
+            <Text size="large" weight="strong">
+              {volunteeringExperience.organization}
+            </Text>
+            <Text size="large" weight="strong" align="right">
+              {volunteeringExperience.location}
+            </Text>
+          </Spread>
+          <Box marginY="xxsmall" />
+          <Spread space="small">
+            <Text size="small">
+              <i>{volunteeringExperience.position}</i>
+            </Text>
+            <Text size="small" align="right">
+              {volunteeringExperience.tenure}
+            </Text>
+          </Spread>
+          <Box marginY="small">
+            <List space="xsmall">
+              {volunteeringExperience.rolesAndAchievements.map(
+                (roleAndAchievement, index) => (
+                  <Text key={`roleAndAchievement-${index}`}>
+                    {roleAndAchievement}
+                  </Text>
+                ),
+              )}
+            </List>
+          </Box>
+        </Box>
+      ))}
+    </Box>
+  );
+};
 
 export default VolunteeringInterestSection;
