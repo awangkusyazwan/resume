@@ -1,21 +1,19 @@
-import 'braid-design-system/reset';
-
-import { BraidProvider, Hidden } from 'braid-design-system';
+import { BraidProvider } from 'braid-design-system';
 import seekJobs from 'braid-design-system/themes/seekJobs';
 import { StrictMode } from 'react';
+import loadable from 'sku/@loadable/component';
+import { Routes, Route } from 'react-router-dom';
 
-import OnlineResume from './OnlineResume';
-import PaperResume from './PrintableResume';
+const Home = loadable(() => import('./OnlineResume'));
+const PrintableResume = loadable(() => import('./PrintableResume'));
 
 export default () => (
   <StrictMode>
     <BraidProvider theme={seekJobs}>
-      <Hidden print>
-        <OnlineResume />
-      </Hidden>
-      <Hidden screen>
-        <PaperResume />
-      </Hidden>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/printable" element={<PrintableResume />} />
+      </Routes>
     </BraidProvider>
   </StrictMode>
 );

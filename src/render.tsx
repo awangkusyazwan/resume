@@ -1,20 +1,21 @@
-import { renderToString } from "react-dom/server";
-import type { Render } from "sku";
+import { renderToString } from 'react-dom/server';
+import type { Render } from 'sku';
 
-import App from "./App/App";
-
-import React from "react";
+import App from './App/App';
+import { StaticRouter } from 'react-router-dom';
 
 interface RenderContext {
   appHtml: string;
 }
 
 const skuRender: Render<RenderContext> = {
-  renderApp: ({ SkuProvider }) => {
+  renderApp: ({ SkuProvider, route }) => {
     const appHtml = renderToString(
       <SkuProvider>
-        <App />
-      </SkuProvider>
+        <StaticRouter location={route}>
+          <App />
+        </StaticRouter>
+      </SkuProvider>,
     );
 
     return {
