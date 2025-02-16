@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 
 export const ResumeIsWIP = () => {
-  if (window.sessionStorage.getItem('showNotice') === 'null') {
-    window.sessionStorage.setItem('showNotice', 'true');
+  if (global.window.sessionStorage.getItem('showNotice') === 'null') {
+    global.window.sessionStorage.setItem('showNotice', 'true');
   }
 
   const displayNotice = window.sessionStorage.getItem('showNotice') === 'true';
@@ -12,7 +12,7 @@ export const ResumeIsWIP = () => {
 
   function handleCloseNotice() {
     setIsVisible(false);
-    window.sessionStorage.setItem('showNotice', 'false');
+    global.window.sessionStorage.setItem('showNotice', 'false');
   }
 
   return (
