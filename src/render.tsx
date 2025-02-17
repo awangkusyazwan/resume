@@ -19,6 +19,7 @@ export default {
       <html>
         <head>
           <title>Syazwan's Resume</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
           ${headTags}
         </head>
         <body>
