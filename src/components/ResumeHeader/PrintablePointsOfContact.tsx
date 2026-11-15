@@ -10,7 +10,8 @@ import {
 import { useResumeData } from '../contexts/ResumeData';
 
 const PrintablePointsOfContact = () => {
-  const { email, website, phoneNumber, emailHref, websiteHref, telNoHref } = useResumeData()
+  const { email, website, phoneNumber, emailHref, websiteHref, telNoHref } =
+    useResumeData();
   return (
     <>
       <Inline space="xxsmall">

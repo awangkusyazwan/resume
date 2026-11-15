@@ -3,8 +3,8 @@ import 'braid-design-system/reset';
 import { BraidProvider } from 'braid-design-system';
 import seekJobs from 'braid-design-system/themes/seekJobs';
 import { StrictMode } from 'react';
-import loadable from 'sku/@loadable/component';
 import { Routes, Route } from 'react-router-dom';
+import loadable from 'sku/@loadable/component';
 
 const Home = loadable(() => import('./OnlineResume'));
 const PrintableResume = loadable(() => import('./PrintableResume'));

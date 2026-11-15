@@ -3,7 +3,6 @@ import { Box, Stack, Inline } from 'braid-design-system';
 import NameAndCredentials from './NameAndCredentials';
 import PointsOfContact from './PointsOfContact';
 import Profiles from './Profiles';
-
 export const ResumeHeader = () => (
   <Box
     background="neutralSoft"

@@ -1,4 +1,4 @@
-import { Badge } from 'braid-design-system';
+import type { Badge } from 'braid-design-system';
 import type { ComponentProps } from 'react';
 
 interface ProfessionalExperience {

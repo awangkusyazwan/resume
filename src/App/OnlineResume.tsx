@@ -1,9 +1,9 @@
-import { PageBlock, Box } from "braid-design-system";
+import { PageBlock, Box } from 'braid-design-system';
 
-import { ResumeIsWIP } from "../components/Notices/ResumeIsWIP";
-import { PageContent } from "../components/PageSections/PageContent";
-import { PageFooter } from "../components/PageSections/PageFooter";
-import PageHeader from "../components/PageSections/PageHeader";
+import { ResumeIsWIP } from '../components/Notices/ResumeIsWIP';
+import { PageContent } from '../components/PageSections/PageContent';
+import { PageFooter } from '../components/PageSections/PageFooter';
+import PageHeader from '../components/PageSections/PageHeader';
 
 export const OnlineResume = () => (
   <PageBlock component="main" width="medium">

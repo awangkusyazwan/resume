@@ -11,7 +11,8 @@ import {
 import { useResumeData } from '../contexts/ResumeData';
 
 const PointsOfContact = () => {
-  const { email, website, phoneNumber, emailHref, websiteHref, telNoHref } = useResumeData()
+  const { email, website, phoneNumber, emailHref, websiteHref, telNoHref } =
+    useResumeData();
 
   return (
     <>

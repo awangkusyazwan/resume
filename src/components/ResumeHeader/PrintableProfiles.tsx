@@ -1,10 +1,11 @@
 import { Text, Inline, Box } from 'braid-design-system';
 
+import { useResumeData } from '../contexts/ResumeData';
+
 import { GitHubLogo } from './assets/GitHubLogo';
 import { LinkedInLogo } from './assets/LinkedInLogo';
 import { Logo } from './assets/Logo';
 import { YouTubeLogo } from './assets/YouTubeLogo';
-import { useResumeData } from '../contexts/ResumeData';
 
 const Profiles = () => {
   const { linkedInHref, youTubeHref, gitHubHref } = useResumeData();

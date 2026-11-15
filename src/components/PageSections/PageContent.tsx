@@ -15,8 +15,8 @@ import {
 import AcademicAndCredentialsSection from '../ResumeSections/AcademicAndCredentialsSection';
 import ProfessionalExperienceSection from '../ResumeSections/ProfessionalExperienceSection';
 import ReferencesSection from '../ResumeSections/ReferencesSection';
-import VolunteeringInterestSection from '../ResumeSections/VolunteeringInterestsSection';
 import { SkillsSection } from '../ResumeSections/SkillsSection';
+import VolunteeringInterestSection from '../ResumeSections/VolunteeringInterestsSection';
 import SectionWrapper from '../Wrappers/SectionWrapper';
 
 export const PageContent = () => (
