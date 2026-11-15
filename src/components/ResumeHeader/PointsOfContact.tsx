@@ -8,14 +8,10 @@ import {
   Text,
 } from 'braid-design-system';
 
-const PointsOfContact = () => {
-  const phoneNumber = '+60178994995';
-  const email = 'me@awangkusyazwan.work';
-  const website = 'awangkusyazwan.work';
+import { useResumeData } from '../contexts/ResumeData';
 
-  const phoneNumberHref = `tel:${phoneNumber}`;
-  const emailHref = `mailto:${email}`;
-  const websiteHref = `https://${website}`;
+const PointsOfContact = () => {
+  const { email, website, phoneNumber, emailHref, websiteHref, telNoHref } = useResumeData()
 
   return (
     <>
@@ -34,7 +30,7 @@ const PointsOfContact = () => {
           </TextLink>
         </Text>
         <Text size="small" icon={<IconPhone tone="positive" />}>
-          <TextLink href={phoneNumberHref} aria-label="phone-number">
+          <TextLink href={telNoHref} aria-label="phone-number">
             {phoneNumber}
           </TextLink>
         </Text>

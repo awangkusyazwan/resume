@@ -2,21 +2,22 @@ import {
   Stack,
   Secondary,
   Text,
+  Link,
   Heading,
   Hidden,
   IconPrint,
   Spread,
   ButtonIcon,
 } from 'braid-design-system';
-import { Link } from 'react-router-dom';
+
+import { useResumeData } from '../contexts/ResumeData';
 
 const NameAndCredentials = ({
   isOnlineResume = true,
 }: {
   isOnlineResume?: boolean;
 }) => {
-  const name = 'Awangku Muhammad Syazwan bin Awangku Sazali';
-  const credentials = ['BEng (Hons)', 'MBCS'];
+  const { name, credentials } = useResumeData();
 
   return (
     <Stack space="xsmall">

@@ -7,15 +7,10 @@ import {
   Inline,
 } from 'braid-design-system';
 
+import { useResumeData } from '../contexts/ResumeData';
+
 const PrintablePointsOfContact = () => {
-  const phoneNumber = '+60178994995';
-  const email = 'me@awangkusyazwan.work';
-  const website = 'awangkusyazwan.work';
-
-  const phoneNumberHref = `tel:${phoneNumber}`;
-  const emailHref = `mailto:${email}`;
-  const websiteHref = `https://${website}`;
-
+  const { email, website, phoneNumber, emailHref, websiteHref, telNoHref } = useResumeData()
   return (
     <>
       <Inline space="xxsmall">
@@ -33,7 +28,7 @@ const PrintablePointsOfContact = () => {
           </TextLink>
         </Text>
         <Text size="small" icon={<IconPhone tone="positive" />}>
-          <TextLink href={phoneNumberHref} aria-label="phone-number">
+          <TextLink href={telNoHref} aria-label="phone-number">
             {phoneNumber}
           </TextLink>
         </Text>

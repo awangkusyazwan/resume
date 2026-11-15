@@ -4,11 +4,10 @@ import { GitHubLogo } from './assets/GitHubLogo';
 import { LinkedInLogo } from './assets/LinkedInLogo';
 import { Logo } from './assets/Logo';
 import { YouTubeLogo } from './assets/YouTubeLogo';
+import { useResumeData } from '../contexts/ResumeData';
 
 const Profiles = () => {
-  const hrefLinkedIn = 'https://www.linkedin.com/in/awangkumuhammadsyazwan';
-  const hrefYouTube = 'https://www.youtube.com/@syaz-dev';
-  const hrefGitHub = 'https://github.com/awangkusyazwan/';
+  const { linkedInHref, youTubeHref, gitHubHref } = useResumeData()
 
   return (
     <Stack space="small">
@@ -25,9 +24,9 @@ const Profiles = () => {
         collapseBelow="tablet"
         align={{ mobile: 'left', tablet: 'center' }}
       >
-        <Logo href={hrefLinkedIn} logo={<LinkedInLogo />} />
-        <Logo href={hrefYouTube} logo={<YouTubeLogo />} />
-        <Logo href={hrefGitHub} logo={<GitHubLogo />} />
+        <Logo href={linkedInHref} logo={<LinkedInLogo />} />
+        <Logo href={youTubeHref} logo={<YouTubeLogo />} />
+        <Logo href={gitHubHref} logo={<GitHubLogo />} />
       </Inline>
     </Stack>
   );
