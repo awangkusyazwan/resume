@@ -1,10 +1,8 @@
 import { Box, Badge, Inline, Stack, Heading } from 'braid-design-system';
 
-import { categorisedSkills as _categorisedSkills } from 'src/data/data';
+import { categorisedSkills } from 'src/data/data';
 
 export const SkillsSection = () => {
-  const categorisedSkills = _categorisedSkills;
-
   return (
     <Box>
       <Stack space="small">

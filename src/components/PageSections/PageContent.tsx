@@ -16,7 +16,6 @@ import AcademicAndCredentialsSection from '../ResumeSections/AcademicAndCredenti
 import ProfessionalExperienceSection from '../ResumeSections/ProfessionalExperienceSection';
 import ReferencesSection from '../ResumeSections/ReferencesSection';
 import VolunteeringInterestSection from '../ResumeSections/VolunteeringInterestsSection';
-import React from 'react';
 import { SkillsSection } from '../ResumeSections/SkillsSection';
 import SectionWrapper from '../Wrappers/SectionWrapper';
 

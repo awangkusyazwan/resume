@@ -1,16 +1,12 @@
 import { Box, Text, Spread, List, Badge, Stack } from 'braid-design-system';
 
 import {
-  academicBackgrounds as _academicBackgrounds,
-  professionalCredentials as _professionalCredentials,
-  certifications as _certifications,
+  academicBackgrounds,
+  professionalCredentials,
+  certifications,
 } from '../../data/data';
 
 export const AcademicAndCredentialsSection = () => {
-  const academicBackgrounds = _academicBackgrounds;
-  const professionalCredentials = _professionalCredentials;
-  const certifications = _certifications;
-
   return (
     <>
       {academicBackgrounds.map((academicBackground, index) => (

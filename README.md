@@ -4,12 +4,12 @@ This project is powered by [sku](https://github.com/seek-oss/sku), [braid](https
 
 ## Getting Started
 
-First of all, make sure you&#39;ve installed [npm](https://docs.npmjs.com/cli/v8/configuring-npm/install).
+First of all, make sure you've installed [pnpm](https://pnpm.io/installation).
 
 Then, install dependencies:
 
 ```sh
-$ npm i
+$ pnpm install
 ```
 
 ## Workflow
@@ -17,24 +17,24 @@ $ npm i
 Start a local development server:
 
 ```sh
-$ npm run start
+$ pnpm run start
 ```
 
 Run unit tests:
 
 ```sh
-$ npm run test
+$ pnpm run test
 ```
 
 Lint and format code:
 
 ```sh
-$ npm run lint
-$ npm run format
+$ pnpm run lint
+$ pnpm run format
 ```
 
 Build assets for production:
 
 ```sh
-$ npm run build
+$ pnpm run build
 ```

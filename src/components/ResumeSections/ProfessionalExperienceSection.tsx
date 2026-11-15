@@ -1,12 +1,8 @@
 import { Box, List, Spread, Text } from 'braid-design-system';
-import React from 'react';
 
-import { professionalExperiences as _professionalExperiences } from '../../data/data';
-import SectionWrapper from '../Wrappers/SectionWrapper';
+import { professionalExperiences } from '../../data/data';
 
 export const ProfessionalExperienceSection = () => {
-  const professionalExperiences = _professionalExperiences;
-
   return (
     <>
       {professionalExperiences.map((experience, index) => (

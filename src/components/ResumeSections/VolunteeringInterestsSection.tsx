@@ -1,9 +1,7 @@
 import { Box, List, Spread, Text } from 'braid-design-system';
-import { volunteeringExperiences as _volunteeringExperiences } from 'src/data/data';
-import SectionWrapper from '../Wrappers/SectionWrapper';
-export const VolunteeringInterestSection = () => {
-  const volunteeringExperiences = _volunteeringExperiences;
+import { volunteeringExperiences } from 'src/data/data';
 
+export const VolunteeringInterestSection = () => {
   return (
     <>
       {volunteeringExperiences.map((volunteeringExperience, index) => (
