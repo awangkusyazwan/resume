@@ -21,6 +21,7 @@ export default {
           <meta charset="utf-8">
           <title>Syazwan's Resume</title>
           <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="icon" type="image/svg+xml" href="/favicon.svg">
           ${headTags}
         </head>
         <body>
