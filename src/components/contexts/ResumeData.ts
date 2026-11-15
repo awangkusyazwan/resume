@@ -3,7 +3,7 @@ export const useResumeData = () => {
 
     const name = 'Awangku Muhammad Syazwan bin Awangku Sazali';
     const nickname = 'Syazwan'
-    const credentials = ['BEng (Hons)', 'MBCS'];
+    const credentials = ['BEng (Hons)', 'GradTech'];
 
     const email = "me@awangkusyazwan.my"
     const website = "awangkusyazwan.my"
