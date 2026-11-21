@@ -1,13 +1,13 @@
 import { PageBlock, Box, Text } from 'braid-design-system';
 
-import { PrintableResumeHeader } from 'src/components/ResumeHeader/PrintableResumeHeader';
-import AcademicAndCredentialsSection from 'src/components/ResumeSections/AcademicAndCredentialsSection';
-import ProfessionalExperienceSection from 'src/components/ResumeSections/ProfessionalExperienceSection';
-import ReferencesSection from 'src/components/ResumeSections/ReferencesSection';
-import { SkillsSection } from 'src/components/ResumeSections/SkillsSection';
-import VolunteeringInterestSection from 'src/components/ResumeSections/VolunteeringInterestsSection';
+import { PrintableResumeHeader } from 'src/components/Header/PrintableResumeHeader';
+import AcademicAndCredentialsSection from 'src/components/Sections/AcademicAndCredentialsSection';
+import ProfessionalExperienceSection from 'src/components/Sections/ProfessionalExperienceSection';
+import ReferencesSection from 'src/components/Sections/ReferencesSection';
+import { SkillsSection } from 'src/components/Sections/SkillsSection';
+import VolunteeringInterestSection from 'src/components/Sections/VolunteeringInterestsSection';
 
-export const PaperResume = () => (
+const PrintableResume = () => (
   <PageBlock component="main" width="medium">
     <PrintableResumeHeader />
     <Text>PROFESSIONAL EXPERIENCE</Text>
@@ -30,4 +30,4 @@ export const PaperResume = () => (
   </PageBlock>
 );
 
-export default PaperResume;
+export default PrintableResume;

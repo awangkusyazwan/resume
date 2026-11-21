@@ -5,12 +5,7 @@ interface SectionWrapperProps {
 }
 
 const SectionWrapper = ({ children }: SectionWrapperProps) => (
-  <Box
-    marginBottom="medium"
-    paddingY="small"
-    overflow="auto"
-    style={{ height: '550px' }}
-  >
+  <Box marginBottom="medium" paddingY="small">
     {children}
   </Box>
 );

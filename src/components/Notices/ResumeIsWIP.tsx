@@ -1,6 +1,6 @@
 import { Alert, Box, Heading, Spread, Text } from 'braid-design-system';
 import { useState } from 'react';
-import { Fade } from 'react-awesome-reveal';
+import { Reveal } from 'react-awesome-reveal';
 
 export const ResumeIsWIP = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -11,7 +11,7 @@ export const ResumeIsWIP = () => {
 
   return (
     isVisible && (
-      <Fade>
+      <Reveal>
         <Alert tone="positive" onClose={handleCloseNotice} closeLabel="Close">
           <Spread space="medium" direction="vertical">
             <Heading level="4"> Welcome to my online resume!</Heading>
@@ -27,7 +27,7 @@ export const ResumeIsWIP = () => {
           </Spread>
         </Alert>
         <Box height="touchable" />
-      </Fade>
+      </Reveal>
     )
   );
 };

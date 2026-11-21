@@ -1,10 +1,10 @@
 import { ContentBlock } from 'braid-design-system';
 
-import { ResumeHeader } from '../ResumeHeader/ResumeHeader';
+import { Header } from '../Header';
 
 export const PageHeader = () => (
   <ContentBlock width="medium">
-    <ResumeHeader />
+    <Header />
   </ContentBlock>
 );
 

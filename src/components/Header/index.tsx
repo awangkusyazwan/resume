@@ -3,12 +3,12 @@ import { Box, Stack, Inline } from 'braid-design-system';
 import NameAndCredentials from './NameAndCredentials';
 import PointsOfContact from './PointsOfContact';
 import Profiles from './Profiles';
-export const ResumeHeader = () => (
+export const Header = () => (
   <Box
     background="neutralSoft"
     borderRadius="large"
     paddingTop="medium"
-    paddingBottom="xsmall"
+    paddingBottom="medium"
     paddingX={{ mobile: 'xsmall', tablet: 'medium' }}
   >
     <Stack space="small">

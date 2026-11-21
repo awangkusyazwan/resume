@@ -3,6 +3,7 @@ import { StaticRouter } from 'react-router-dom';
 import type { Render } from 'sku';
 
 import App from './App/App';
+import { colorModeInitializationScript } from './utils/colorMode';
 
 export default {
   renderApp: ({ SkuProvider, route }) =>
@@ -22,6 +23,11 @@ export default {
           <title>Syazwan's Resume</title>
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+          ${
+            colorModeInitializationScript
+              ? `<script>${colorModeInitializationScript}</script>`
+              : ''
+          }
           ${headTags}
         </head>
         <body>

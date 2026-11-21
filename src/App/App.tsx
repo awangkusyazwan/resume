@@ -6,8 +6,8 @@ import { StrictMode } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import loadable from 'sku/@loadable/component';
 
-const Home = loadable(() => import('./OnlineResume'));
-const PrintableResume = loadable(() => import('./PrintableResume'));
+const Home = loadable(() => import('../components/OnlineResume'));
+const PrintableResume = loadable(() => import('../components/PrintableResume'));
 
 export default () => (
   <StrictMode>
