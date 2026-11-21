@@ -20,6 +20,8 @@ import {
 } from '../../utils/colorMode';
 import { useResumeData } from '../contexts/ResumeData';
 
+import { IconDarkMode } from './assets/IconDarkMode';
+
 const NavBar = () => {
   const { nickname, websiteHref } = useResumeData();
   const [isDark, setIsDark] = useState(false);
@@ -84,7 +86,7 @@ const NavBar = () => {
                   {nickname}&apos;s Resume
                 </Text>
                 <Toggle
-                  label="Dark"
+                  label={<IconDarkMode />}
                   size="small"
                   on={isDark}
                   onChange={handleColorModeChange}
@@ -124,10 +126,12 @@ const NavBar = () => {
               </Text>
               <Inline space="small" alignY="center">
                 <Toggle
-                  label="Dark mode"
+                  togglePosition='trailing'
+                  label={<IconDarkMode />}
                   size="small"
                   on={isDark}
                   onChange={handleColorModeChange}
+
                 />
                 <ButtonIcon
                   icon={<IconPrint />}
