@@ -90,6 +90,9 @@ const NavBar = () => {
       background="brand"
       paddingY={{ mobile: 'small', tablet: 'xsmall' }}
       paddingX="small"
+      position="sticky"
+      top={0}
+      zIndex="sticky"
     >
       <ContentBlock width="medium">
         <Stack space="small">

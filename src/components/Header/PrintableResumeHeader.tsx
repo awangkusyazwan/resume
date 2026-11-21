@@ -14,7 +14,7 @@ export const PrintableResumeHeader = () => (
     marginY="small"
   >
     <Stack space="small">
-      <NameAndCredentials isOnlineResume={false} />
+      <NameAndCredentials />
       <Box
         display="flex"
         alignItems={{ mobile: 'flexStart', tablet: 'center' }}

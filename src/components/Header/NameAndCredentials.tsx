@@ -1,22 +1,8 @@
-import {
-  Stack,
-  Secondary,
-  Text,
-  Heading,
-  Hidden,
-  IconPrint,
-  Spread,
-  ButtonIcon,
-} from 'braid-design-system';
-import { Link } from 'react-router-dom';
+import { Stack, Secondary, Text, Heading, Spread } from 'braid-design-system';
 
 import { useResumeData } from '../contexts/ResumeData';
 
-const NameAndCredentials = ({
-  isOnlineResume = true,
-}: {
-  isOnlineResume?: boolean;
-}) => {
+const NameAndCredentials = () => {
   const { name, credentials } = useResumeData();
 
   return (
