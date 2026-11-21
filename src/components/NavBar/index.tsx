@@ -11,7 +11,7 @@ import {
   Text,
   Toggle,
 } from 'braid-design-system';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import {
   applyColorMode,
@@ -23,7 +23,6 @@ import { useResumeData } from '../contexts/ResumeData';
 const NavBar = () => {
   const { nickname, websiteHref } = useResumeData();
   const [isDark, setIsDark] = useState(false);
-  const printFrameRef = useRef<HTMLIFrameElement | null>(null);
 
   useEffect(() => {
     const colorMode = getColorMode();
@@ -31,57 +30,34 @@ const NavBar = () => {
     applyColorMode(colorMode);
   }, []);
 
-  useEffect(
-    () => () => {
-      printFrameRef.current?.remove();
-    },
-    [],
-  );
-
   const handleColorModeChange = (dark: boolean) => {
     setIsDark(dark);
     setColorMode(dark ? 'dark' : 'light');
   };
 
   const handlePrint = () => {
-    printFrameRef.current?.remove();
+    const printWindow = window.open('/printable?print=1', '_blank');
 
-    const printFrame = document.createElement('iframe');
-    printFrame.src = '/printable?print=1';
-    printFrame.title = 'Printable resume';
-    printFrame.setAttribute('aria-hidden', 'true');
-    printFrame.style.position = 'fixed';
-    printFrame.style.top = '0';
-    printFrame.style.left = '-10000px';
-    printFrame.style.width = '1024px';
-    printFrame.style.height = '768px';
-    printFrame.style.border = '0';
+    if (!printWindow) {
+      return;
+    }
 
-    printFrame.onload = () => {
-      const printWindow = printFrame.contentWindow;
+    printWindow.addEventListener(
+      'load',
+      () => {
+        const print = () => {
+          printWindow.focus();
+          printWindow.print();
+        };
 
-      if (!printWindow) {
-        printFrame.remove();
-        return;
-      }
-
-      const print = () => {
-        printWindow.focus();
-        printWindow.print();
-        window.setTimeout(() => printFrame.remove(), 1000);
-      };
-
-      if (printWindow.document.fonts) {
-        printWindow.document.fonts.ready.then(print);
-      } else {
-        print();
-      }
-    };
-
-    printFrame.onerror = () => printFrame.remove();
-
-    printFrameRef.current = printFrame;
-    document.body.appendChild(printFrame);
+        if (printWindow.document.fonts) {
+          printWindow.document.fonts.ready.then(print);
+        } else {
+          print();
+        }
+      },
+      { once: true },
+    );
   };
 
   return (
