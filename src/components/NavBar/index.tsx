@@ -1,12 +1,13 @@
 import {
   Box,
-  Button,
+  ButtonIcon,
   ButtonLink,
   ContentBlock,
+  Hidden,
   IconNewWindow,
   IconPrint,
-  IconTip,
   Inline,
+  Stack,
   Text,
   Toggle,
 } from 'braid-design-system';
@@ -84,48 +85,92 @@ const NavBar = () => {
   };
 
   return (
-    <Box component="nav" background="brand" paddingY="xsmall" paddingX="small">
+    <Box
+      component="nav"
+      background="brand"
+      paddingY={{ mobile: 'small', tablet: 'xsmall' }}
+      paddingX="small"
+    >
       <ContentBlock width="medium">
-        <Box
-          display="flex"
-          alignItems="center"
-          justifyContent="spaceBetween"
-          flexWrap="wrap"
-        >
-          <Text size="large" weight="strong">
-            {nickname}&apos;s Resume
-          </Text>
-          <Inline space="small" alignY="center">
-            <Toggle
-              label={
-                <Inline space="xsmall" alignY="center">
-                  <IconTip />
-                </Inline>
-              }
-              size="small"
-              on={isDark}
-              onChange={handleColorModeChange}
-            />
-            <Button
-              variant="ghost"
-              size="small"
-              icon={<IconPrint />}
-              onClick={handlePrint}
+        <Stack space="small">
+          {/* Mobile: Stacked layout */}
+          <Hidden above="mobile">
+            <Stack space="small">
+              <Box
+                display="flex"
+                justifyContent="spaceBetween"
+                alignItems="center"
+              >
+                <Text size="standard" weight="strong">
+                  {nickname}&apos;s Resume
+                </Text>
+                <Toggle
+                  label="Dark"
+                  size="small"
+                  on={isDark}
+                  onChange={handleColorModeChange}
+                />
+              </Box>
+              <Inline space="small" alignY="center">
+                <ButtonIcon
+                  icon={<IconPrint />}
+                  label="Print"
+                  id="print-mobile"
+                  size="small"
+                  onClick={handlePrint}
+                />
+                <ButtonLink
+                  href={websiteHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  variant="ghost"
+                  size="small"
+                  icon={<IconNewWindow />}
+                >
+                  Portfolio
+                </ButtonLink>
+              </Inline>
+            </Stack>
+          </Hidden>
+
+          {/* Tablet and above: Horizontal layout */}
+          <Hidden below="tablet">
+            <Box
+              display="flex"
+              alignItems="center"
+              justifyContent="spaceBetween"
             >
-              Print this resume
-            </Button>
-            <ButtonLink
-              href={websiteHref}
-              target="_blank"
-              rel="noreferrer"
-              variant="ghost"
-              size="small"
-              icon={<IconNewWindow />}
-            >
-              Visit my portfolio website
-            </ButtonLink>
-          </Inline>
-        </Box>
+              <Text size="large" weight="strong">
+                {nickname}&apos;s Resume
+              </Text>
+              <Inline space="small" alignY="center">
+                <Toggle
+                  label="Dark mode"
+                  size="small"
+                  on={isDark}
+                  onChange={handleColorModeChange}
+                />
+                <ButtonIcon
+                  icon={<IconPrint />}
+                  label="Print resume"
+                  id="print-desktop"
+                  size="small"
+                  onClick={handlePrint}
+                />
+                <ButtonLink
+                  href={websiteHref}
+                  target="_blank"
+                  rel="noreferrer"
+                  variant="ghost"
+                  size="small"
+                  icon={<IconNewWindow />}
+                >
+                  Portfolio
+                </ButtonLink>
+              </Inline>
+            </Box>
+          </Hidden>
+        </Stack>
       </ContentBlock>
     </Box>
   );
