@@ -6,7 +6,7 @@ interface ProfessionalExperience {
   location: string;
   position: string;
   tenure: string;
-  rolesAndAchievements: string[];
+  rolesAndAchievements: Array<Record<string, string>>;
 }
 
 interface AcademicBackground {
@@ -69,17 +69,27 @@ export const useResumeData = () => {
       position: 'Associate Software Engineer',
       tenure: '22nd August 2022 – Present',
       rolesAndAchievements: [
-        'Independently author or collaboratively co-author sprint-planned or ad-hoc bug fixes and feature enhancements with supplementing test cases derived from bug bashing, tech discovery or bug reporting in a DevOps environment through CI/CD pipelines releases as major, minor or patch releases via semantic versioning',
-        'Maintain codebase resilience through vulnerability issue remediation for team-owned systems as a sprint-rotating resilience champion over on average once every 4 sprints',
-        'Contribute in sprint agile ceremonies by estimating ticket complexity in backlog grooming sessions, run standup and retrospective sessions, and collaboratively plan for fortnightly sprints',
-        'Improve DevOps processes within the team by optimising CI/CD pipeline and maintaining dependencies on team-owned systems, in accordance with org-adopted requests for comments (RFCs) and standards',
-        'Continuously uplift competencies and skills in various areas of front-end biased full-stack development technologies and associated stacks e.g., React, TypeScript, AWS, GraphQL, HTML, CSS, and testing libraries',
-        'Improved system monitoring and observability while optimising cost base by implementing and testing Datadog RUM in codebase, resulting in increased system resilience and enhanced client-side error logging',
-        'Directly collaborated with 5 senior engineers, 2 delivery leads, and 2 SEO specialists on delivering URL redirection for legacy JobsDB URLs on web, collectively resulting in 95%+ passing of SEO user acceptance test cases, improved SEO rankings for unified APAC URLs without compromising conversion funnels from legacy endpoints and flattened the redirection hops for legacy endpoints',
-        'Directly collaborated with 3 senior engineers, 1 UX designer and 2 product managers on the New Visual Language (NVL) site refresh for candidate domains in the Search Engine Results Page (SERP) and Saved Searches static page to improve visual appeal in accordance with APAC platform unification OKR',
-        'Collaborated with a senior engineer in migrating a cookie-based authentication workflow to a JWT-based session authentication flow, resulting in a more secure authentication for domain-shared GraphQL-powered API',
-        'Contributed to the Graduate program by thoroughly screening through 1-way interview responses against a set of criteria for ~25 applicants per week over 3 occasions of Graduate program hiring for 2 cohorts based in ANZ and Asia, resulting in higher benchmark for candidate talent pool quality',
-      ],
+        {
+          "React UI & Platform Modernization": "Spearheaded candidate-facing front-end updates across the Search Engine Results Page (SERP) and Saved Searches pages using React and TypeScript, delivering the New Visual Language site refresh in alignment with APAC platform unification OKRs."
+        },
+        { "SDLC & End-to-end Feature Ownership": "Independently delivered and owned SDLC of features in brownfield projects such as profile avatar, header uplift, and user feedback loops flows in core team-owned systems" },
+        {
+          "Web Accessibility (WCAG)": "Led a 2-week accessibility uplift for candidate homepage web applications, auditing and refactoring React components to achieve strict WCAG 2.1 AA conformance."
+        },
+        {
+          "SEO & Legacy Hostname Redirection": "Partnered with senior engineers and SEO specialists to deliver legacy URL redirection for legacy and pre-unification APAC endpoints, ensuring a 95 % + SEO UAT pass rate while retaining core conversion funnel performance."
+        },
+        {
+          "Authentication Security & GraphQL": "Co-engineered the migration of a product domain-shared GraphQL API from cookie-based sessions to a JWT authentication model, uplifting client-side security and session management."
+        },
+        {
+          "Observability & Cost Optimization": "Integrated and benchmarked Datadog Real User Monitoring (RUM) and other observability patterns within frontend client codebases, elevating client-side logging while reducing monitoring overhead."
+        },
+        { "AI Tooling & Innovation": "Integrated AI-assisted IDEs (Cursor AI, GitHub Copilot, Opencode) into daily sprint development; co-delivered an experimental release of an agentic AI feature." },
+        {
+          "DevOps & Resilience Ownership": "Served as the team Resilience Champion every 4 sprints on average on roster, managing automated CI / CD pipeline optimizations, dependency security patching, and vulnerability remediation."
+        },
+        { "Talent Acquisition": "Evaluated 75+ technical video submissions for ANZ/Asia Graduate Engineering cohorts, establishing baseline rubric criteria to screen high-calibre talent." }],
     },
     {
       employer: 'Carrier Malaysia Sdn. Bhd.',
@@ -87,13 +97,24 @@ export const useResumeData = () => {
       position: 'Engineer, Service Sales',
       tenure: '7th February – 26th July 2022 ',
       rolesAndAchievements: [
-        'Engaged with 30+ key contacts from 25+ accounts including 1 new account in the Sarawak market for growth of opportunities, revenue, and CRM of the Service and Aftermarket lifecycle of commercial HVAC segment and recapture of lapsed service renewals with prospective and existing customers with near-expiry warranties',
-        'Adhered and ensured strict compliance to policies outlining employer-mandated Environmental, Health & Safety (EH&S) policies as outlined under Corporate Policy Manual - Section 2 (EH&S) resulting in zero Total Recordable Incidence Rate (TRIR) and Lost Workday Incidence Rate (LWIR) YTD',
-        'Conducted costing exercise and supplier/vendor liaison to ensure smooth, effective, stakeholder-compliant and rapid delivery of services to all customers using Carrier expertise as Sole Principal Organization providing OEM-mandated Aftermarket services for Carrier CHVAC equipment and plant',
-        'Monitored 25+ customer ageing accounts to ensure timely payment for settling of current and overdue account balance as per End-of-Pay-Period Statement of Account (SoA) subject to policies enforced by the Company-Customer settlement plans and remittance requirements',
-        'Facilitated instances of urgent complaints of HVAC plant breakdowns or system failures with an average of 2 days for satisfactory provisioning of emergency turnarounds, aligned with Customer demands over period of mitigation',
-        'Updated an average of 5+ active pipelines per week regularly on SFDC to ensure seamless CRM and per-account management',
-        'Assisted in organising, and participated in, service seminars/ training programs with Customers, new hires (i.e., interns) and work with training groups within the wider organization',
+        {
+          "Customer Relationship Management (CRM)": "Engaged with 30+ key contacts from 25+ accounts including 1 new account in the Sarawak market for growth of opportunities, revenue, and CRM of the Service and Aftermarket lifecycle of commercial HVAC segment and recapture of lapsed service renewals with prospective and existing customers with near-expiry warranties"
+        },
+        {
+          "Health & Safety Conformance": "Adhered and ensured strict compliance to policies outlining employer-mandated Environmental, Health & Safety (EH&S) policies as outlined under Corporate Policy Manual - Section 2 (EH&S) resulting in zero Total Recordable Incidence Rate (TRIR) and Lost Workday Incidence Rate (LWIR) YTD"
+        },
+        {
+          "Stakeholder Management": "Conducted costing exercise and supplier/vendor liaison to ensure smooth, effective, stakeholder-compliant and rapid delivery of services to all customers using Carrier expertise as Sole Principal Organization providing OEM-mandated Aftermarket services for Carrier CHVAC equipment and plant"
+        },
+        {
+          "Accounts Management":
+            "Monitored 25+ customer ageing accounts to ensure timely payment for settling of current and overdue account balance as per End-of-Pay-Period Statement of Account (SoA) subject to policies enforced by the Company-Customer settlement plans and remittance requirements"
+        },
+        {
+          "Work Order Facilitation": "Facilitated instances of urgent complaints of HVAC plant breakdowns or system failures with an average of 2 days for satisfactory provisioning of emergency turnarounds, aligned with Customer demands over period of mitigation"
+        },
+        { "Conversion Funnel Management": "Updated an average of 5+ active pipelines per week regularly on SFDC to ensure seamless CRM and per-account management" },
+        { "Training Facilitation": "Assisted in organising, and participated in, service seminars/ training programs with Customers, new hires (i.e., interns) and work with training groups within the wider organization" },
       ],
     },
     {
@@ -102,9 +123,9 @@ export const useResumeData = () => {
       position: 'Industrial Trainee (Instrumentation Engineering)',
       tenure: 'December 2019 – February 2020 ',
       rolesAndAchievements: [
-        'Conducted reaffirmation of IPF (Instrumented Protective Function) studies and recommendations made by in-house consultants reportable to section TP (Technical Professional)',
-        'Conducted the conceptual study for IPF recommendations for 1 instrument at the Temana-B asset and presented a summary of the study to department executives',
-        'Collaboratively reassessed the Safety Impact Level (SIL) matrix for a chemical injection tank level IPF at an in-field asset with on-site operators, consultants, executive and department manager',
+        { "Instrumentation Study": "Conducted reaffirmation of Instrumented Protective Function (IPF) studies and recommendations made by in-house consultants reportable to section TP (Technical Professional)" },
+        { "Conceptual Study": "Conducted the conceptual study for IPF recommendations for 1 instrument at the Temana-B asset and presented a summary of the study to department executives" },
+        { "Safety Impact Reassessment": "Collaboratively reassessed the Safety Impact Level (SIL) matrix for a chemical injection tank level IPF at an in-field asset with on-site operators, consultants, executive and department manager" },
       ],
     },
   ];
@@ -118,8 +139,8 @@ export const useResumeData = () => {
       hrefForCredential:
         'https://app.box.com/s/uykc33r78a1opzcbte8nl3yfp5s1rl2j',
       rolesAndAchievements: [
-        'CGPA: 3.4.0/4.00',
-        'Final Year Honours Project: Portable Multi-Position Vibration Data Acquisition (DAQ) Device',
+        'CGPA: 3.40/4.00',
+        'Final Year Capstone Project: Portable Multi-Position Vibration Data Acquisition (DAQ) Device',
         'Extracurriculars: Vice President - Engineers Australia Swinburne Sarawak Student Society',
       ],
     },
@@ -178,21 +199,29 @@ export const useResumeData = () => {
       category: 'Technical',
       skills: [
         'TypeScript',
-        'JavaScript',
-        'GraphQL',
-        'Node.js',
-        'Python',
-        'React',
-        'React Testing Library',
-        'Jest',
-        'C++',
-        'C#',
-        'AWS',
         'HTML',
         'CSS',
+        'JavaScript',
+        'Python',
+        'GraphQL',
+        'Node.js',
+        'C++',
+        'C#',
+        'React.js',
+        'React Testing Library',
+        'Jest',
+        'Vitest',
+        'AWS',
+        'Vite',
+        'Bash/Zsh',
+        'Next.js',
+        'Three.js',
         'Cypress',
         'Datadog',
         'Git',
+        'GitHub',
+        'Cloudflare Workers',
+        'Cursor/Copilot/Opencode (AI Tools)',
         'CI/CD',
       ],
       badgeTone: 'positive',

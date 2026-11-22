@@ -1,4 +1,4 @@
-import { Box, List, Spread, Text } from 'braid-design-system';
+import { Box, List, Spread, Strong, Text } from 'braid-design-system';
 
 import { useResumeData } from '../contexts/ResumeData';
 
@@ -32,10 +32,15 @@ export const ProfessionalExperienceSection = () => {
           </Spread>
           <Box marginY="small">
             <List space="xsmall">
-              {experience.rolesAndAchievements.map((roleAndAchievement) => (
-                <Text key={roleAndAchievement} size="small">
-                  {roleAndAchievement}
-                </Text>
+              {experience.rolesAndAchievements.map((roleAndAchievement, index) => (
+                Object.entries(roleAndAchievement).map(([key, value]) => (
+                  <Text key={`roleAndAchievement-${index}`} size="small">
+                    <Strong>
+                      {`${key}: `}
+                    </Strong>
+                    {`${value}`}
+                  </Text>
+                ))
               ))}
             </List>
           </Box>
