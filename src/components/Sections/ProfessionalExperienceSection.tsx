@@ -1,4 +1,4 @@
-import { Box, List, Spread, Strong, Text } from 'braid-design-system';
+import { Badge, Box, List, Spread, Strong, Text } from 'braid-design-system';
 
 import { useResumeData } from '../contexts/ResumeData';
 
@@ -13,13 +13,16 @@ export const ProfessionalExperienceSection = () => {
           marginBottom="medium"
           style={{ breakInside: 'avoid' }}
         >
-          <Spread space="small">
-            <Text size="large" weight="strong">
+          <Spread space="small" alignY="center">
+            <Text size="large" weight="strong" maxLines={4}>
               {experience.employer}
             </Text>
-            <Text size="large" weight="strong" align="right">
-              {experience.location}
-            </Text>
+            <Box width='full' display='flex' gap="small" alignItems="center">
+              <Badge weight='strong' tone='positive'>{experience.workMode}</Badge>
+              <Text size="large" weight="strong" align="right" maxLines={2}>
+                {experience.location}
+              </Text>
+            </Box>
           </Spread>
           <Box marginY="xxsmall" />
           <Spread space="small" alignY="center">

@@ -6,7 +6,7 @@ import PrintableProfiles from './PrintableProfiles';
 
 export const PrintableResumeHeader = () => (
   <Box
-    background="neutralSoft"
+    background="neutralLight"
     borderRadius="large"
     paddingTop="medium"
     paddingBottom="xsmall"

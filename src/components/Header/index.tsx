@@ -5,7 +5,7 @@ import PointsOfContact from './PointsOfContact';
 import Profiles from './Profiles';
 export const Header = () => (
   <Box
-    background="neutralSoft"
+    background="neutralLight"
     borderRadius="large"
     paddingTop="medium"
     paddingBottom="medium"

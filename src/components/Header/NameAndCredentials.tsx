@@ -1,17 +1,18 @@
-import { Stack, Secondary, Text, Heading, Spread } from 'braid-design-system';
+import { Stack, Secondary, Text, Avatar, Inline } from 'braid-design-system';
 
 import { useResumeData } from '../contexts/ResumeData';
 
 const NameAndCredentials = () => {
-  const { name, credentials } = useResumeData();
+  const { name, credentials, imageUrl } = useResumeData();
 
   return (
     <Stack space="xsmall">
-      <Spread space="small" alignY="top">
-        <Heading level="2" align="left">
+      <Inline space="small" alignY="center" >
+        <Avatar name={name} size="large" imageUrl={imageUrl} />
+        <Text weight="strong" size="large" align="left">
           {name}
-        </Heading>
-      </Spread>
+        </Text>
+      </Inline>
       <Text size="small" align="left">
         <Secondary>{credentials.join(' • ')}</Secondary>
       </Text>

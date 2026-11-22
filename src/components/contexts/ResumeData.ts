@@ -3,6 +3,7 @@ import type { ComponentProps } from 'react';
 
 interface ProfessionalExperience {
   employer: string;
+  workMode: 'On-site' | 'Hybrid' | 'Remote';
   location: string;
   position: string;
   tenure: string;
@@ -49,6 +50,8 @@ export const useResumeData = () => {
   const name = 'Awangku Muhammad Syazwan bin Awangku Sazali';
   const nickname = 'Syazwan';
   const credentials = ['BEng (Hons)', 'GradTech'];
+  const imageUrl = 'https://i.ibb.co/SDqVgyLS/35-X35-Casual-BGless.png';
+
 
   const email = 'me@awangkusyazwan.my';
   const website = 'awangkusyazwan.my';
@@ -57,6 +60,7 @@ export const useResumeData = () => {
   const linkedInHref = 'https://www.linkedin.com/in/awangkusyazwan';
   const youTubeHref = 'https://www.youtube.com/@syaz-dev';
   const gitHubHref = 'https://github.com/awangkusyazwan';
+  const seekHref = 'https://my.jobstreet.com/profiles/awangkumuhammadsyazwan-binawangkusazali-mekvqv7ogt';
 
   const emailHref = `mailto:${email}`;
   const websiteHref = `https://${website}`;
@@ -65,7 +69,8 @@ export const useResumeData = () => {
   const professionalExperiences: ProfessionalExperience[] = [
     {
       employer: 'JobStreet.com Shared Services Sdn. Bhd.',
-      location: 'Kuala Lumpur, Malaysia (Hybrid)',
+      location: 'Kuala Lumpur, Malaysia',
+      workMode: 'Hybrid',
       position: 'Associate Software Engineer',
       tenure: '22nd August 2022 – Present',
       rolesAndAchievements: [
@@ -94,6 +99,7 @@ export const useResumeData = () => {
     {
       employer: 'Carrier Malaysia Sdn. Bhd.',
       location: 'Kuching, Malaysia',
+      workMode: 'On-site',
       position: 'Engineer, Service Sales',
       tenure: '7th February – 26th July 2022 ',
       rolesAndAchievements: [
@@ -120,6 +126,7 @@ export const useResumeData = () => {
     {
       employer: 'PETRONAS Carigali Sdn. Bhd.',
       location: 'Miri, Malaysia',
+      workMode: 'On-site',
       position: 'Industrial Trainee (Instrumentation Engineering)',
       tenure: 'December 2019 – February 2020 ',
       rolesAndAchievements: [
@@ -237,12 +244,14 @@ export const useResumeData = () => {
     name,
     nickname,
     credentials,
+    imageUrl,
     email,
     website,
     phoneNumber,
     linkedInHref,
     youTubeHref,
     gitHubHref,
+    seekHref,
     emailHref,
     websiteHref,
     telNoHref,
