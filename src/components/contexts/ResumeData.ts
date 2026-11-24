@@ -72,7 +72,7 @@ export const useResumeData = () => {
       location: 'Kuala Lumpur, Malaysia',
       workMode: 'Hybrid',
       position: 'Associate Software Engineer',
-      tenure: '22nd August 2022 – Present',
+      tenure: '22nd August 2022 – 4th December 2026',
       rolesAndAchievements: [
         {
           "React UI & Platform Modernization": "Spearheaded candidate-facing front-end updates across the Search Engine Results Page (SERP) and Saved Searches pages using React and TypeScript, delivering the New Visual Language site refresh in alignment with APAC platform unification OKRs."
