@@ -43,7 +43,7 @@ export const PageContent = () => {
         <Box height="touchable" />
         <TabsProvider id="tabs">
           <Stack space="xxsmall">
-            <Tabs label="tabs-for-resume-item">
+            <Tabs align="center" label="tabs-for-resume-item">
               {pageContents.map(({ icon, tabLabel }) => (
                 <Tab key={tabLabel} icon={icon}>
                   {tabLabel}
